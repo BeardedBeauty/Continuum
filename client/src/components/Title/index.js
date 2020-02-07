@@ -3,10 +3,10 @@ import background from "../../assets/Images/bg.JPG";
 import "./style.css";
 import "../../assets/Fonts/CELTG___.TTF";
 
-function Title() {
+function Title(props) {
     return (
         <>
-            <div className="cover">
+            <div className={"cover " + props.stylesize} onScroll={props.onscroll}>
                 <div className="holder2">
                     <h2>M A R T Y 'S    A R T S</h2>
                 </div>
