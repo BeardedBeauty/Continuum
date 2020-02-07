@@ -8,7 +8,8 @@ class App extends React.Component {
         super(props);
         this.state = {
             titlesize: "mega",
-            titlemargin: "continuumMarginLarge"
+            titlemargin: "continuumMarginLarge",
+            capsC: "capsLargeC"
         }
     };
 
@@ -24,10 +25,12 @@ class App extends React.Component {
         let scroll = window.scrollY;
         scroll > 100 ? this.setState({
             titlesize: "scroll",
-            titlemargin: "continuumMarginSmall"
+            titlemargin: "continuumMarginSmall",
+            capsC: "capsSmallC"
         }) : this.setState({
             titlesize: "mega",
-            titlemargin: "continuumMarginLarge"
+            titlemargin: "continuumMarginLarge",
+            capsC: "capsLargeC"
         });
     };
 
@@ -38,7 +41,8 @@ class App extends React.Component {
                 <Title
                     onscroll={this.scroll}
                     stylesize={this.state.titlesize}
-                    cntuumHolder={this.state.titlemargin} />
+                    cntuumHolder={this.state.titlemargin}
+                    h1C={this.state.capsC} />
             </>
         )
     }
