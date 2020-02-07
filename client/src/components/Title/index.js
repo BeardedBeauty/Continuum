@@ -8,11 +8,11 @@ function Title(props) {
         <>
             <div className={"cover " + props.stylesize} onScroll={props.onscroll}>
                 <div className="holder2">
-                    <h2>M A R T Y 'S    A R T S</h2>
+                    <h2>M A R T Y 'S</h2><h2>A R T S</h2>
                 </div>
                 <div className="holder">
-                    <h1 className="caps">C</h1>
-                    <h1 className="non">O N T I N U U M</h1>
+                    <h1 className={"caps " + props.h1C}>C</h1>
+                    <h1 className={"non" + props.h1U}>O N T I N U U M</h1>
                 </div>
             </div>
             <img src={background} alt="background" className="titleimg" />

@@ -9,9 +9,28 @@ h1 {
     float: left;
 }
 
+h2 {
+    float: left;
+}
+
+.caps {
+    font-size: 40px;
+    padding-top: 0px;
+    margin-top: 13px;
+    margin-right: 20px;
+}
+
 .non {
     padding-top: 29px;
     padding-left: 20px;
+}
+
+.continuumMarginLarge {
+    margin-top: 90px;
+}
+
+.continuumMarginSmall {
+    margin-top: 20px;
 }
 
 .holder {
@@ -19,7 +38,6 @@ h1 {
     width: 415px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -40px;
     margin-bottom: 0px;
 }
 
@@ -30,6 +48,7 @@ h1 {
     margin-right: auto;
     margin-top: 0px;
     margin-bottom: 0px;
+    position: absolute;
 }
 
 .cover {
@@ -49,11 +68,6 @@ h1 {
 
 .scroll {
     height: 70px;
-}
-
-.caps {
-    font-size: 40px;
-    padding-top: 15px;
 }
 
 .titleimg {

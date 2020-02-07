@@ -21,7 +21,7 @@ class App extends React.Component {
 
     scroll = (event) => {
         let scroll = window.scrollY;
-        scroll > 0 ? this.setState({ titlesize: "scroll" }) : this.setState({ titlesize: "mega" });
+        scroll > 100 ? this.setState({ titlesize: "scroll" }) : this.setState({ titlesize: "mega" });
     };
 
     render() {
