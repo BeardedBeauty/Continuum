@@ -11,6 +11,22 @@ class App extends React.Component {
         }
     }
 
+    componentDidMount = () => {
+        window.addEventListener('scroll', this.scroll);
+    }
+
+    componentWillUnmount = () => {
+        window.removeEventListener('scroll', this.scroll);
+    }
+
+    scroll = (event) => {
+        let scrollTop = event.srcElement.body.scrollTop,
+            itemTranslate = Math.min(0, scrollTop / 3 - 60);
+
+        this.setState({
+            transform: itemTranslate
+        })
+    }
 
     render() {
         return (
