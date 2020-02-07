@@ -1,6 +1,6 @@
 import React from 'react';
-import Logo from "./components/Logo";
-// import logo from './logo.svg';
+// import Logo from "./components/Logo";
+import Title from "./components/Title";
 import './App.css';
 
 class App extends React.Component {
@@ -31,7 +31,8 @@ class App extends React.Component {
     render() {
         return (
             <>
-                <Logo />
+                {/* <Logo /> */}
+                <Title />
             </>
             // <div className="App">
             //   <header className="App-header">
