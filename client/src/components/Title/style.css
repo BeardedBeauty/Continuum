@@ -13,7 +13,14 @@ h2 {
     float: left;
 }
 
-.caps {
+.capsLargeC {
+    font-size: 40px;
+    padding-top: 0px;
+    margin-top: 13px;
+    margin-right: 20px;
+}
+
+.capsSmallC {
     font-size: 40px;
     padding-top: 0px;
     margin-top: 13px;
@@ -30,7 +37,7 @@ h2 {
 }
 
 .continuumMarginSmall {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .holder {
@@ -39,6 +46,7 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0px;
+    transition: .2s;
 }
 
 .holder2 {
@@ -59,7 +67,7 @@ h2 {
     z-index: 10;
     font-family: 'Celtic Garamond the 2nd';
     padding-top: 10px;
-    transition: .2s;
+    transition: .4s;
 }
 
 .mega {

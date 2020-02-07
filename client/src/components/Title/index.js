@@ -10,7 +10,7 @@ function Title(props) {
                 <div className="holder2">
                     <h2>M A R T Y 'S</h2><h2>A R T S</h2>
                 </div>
-                <div className="holder">
+                <div className={"holder " + props.cntuumHolder}>
                     <h1 className={"caps " + props.h1C}>C</h1>
                     <h1 className={"non" + props.h1U}>O N T I N U U M</h1>
                 </div>
