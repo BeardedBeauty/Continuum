@@ -19,7 +19,8 @@ class App extends React.Component {
             continuumPlacer: "continuumhalf",
             artsHolder: "martysartsCenter",
             holder2placer: "holder2PlacerCenter",
-            scrollButtonVisible: "scrollButton"
+            scrollButtonVisible: "scrollButton",
+            scrollTop: null
         }
     };
 
@@ -32,9 +33,8 @@ class App extends React.Component {
     };
 
     scroll = (event) => {
-        let scroll = window.scrollY;
-        console.log(scroll);
-        scroll > 150 ? this.setState({
+        let scrolling = window.scrollY;
+        scrolling > 150 ? this.setState({
             titlesize: "scroll",
             titlemargin: "continuumMarginSmall",
             capsC: "capsSmallC",
@@ -54,13 +54,13 @@ class App extends React.Component {
             holder2placer: "holder2PlacerCenter"
         });
 
-        scroll > 600 ? this.setState({ scrollButtonVisible: "hide" })
+        scrolling > 600 ? this.setState({ scrollButtonVisible: "hide" })
             : this.setState({ scrollButtonVisible: "scrollButton" });
     };
 
     scrollButton = (event) => {
-        event.preventDefault();
-        window.scrollTo(0, this.scrollRef.current.offsetTop);
+        event ? event.preventDefault() : console.log(event);
+        // window.scrollTo(0, this.scrollRef.current.offsetTop);
     };
 
     render() {
