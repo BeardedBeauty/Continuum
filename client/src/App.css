@@ -41,3 +41,7 @@
 body {
   background: #131313;
 }
+
+html {
+  scroll-behavior: smooth;
+}

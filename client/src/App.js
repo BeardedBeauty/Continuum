@@ -9,6 +9,7 @@ import Gallery from './components/Gallery';
 class App extends React.Component {
     constructor(props) {
         super(props);
+        this.scrollRef = React.createRef();
         this.state = {
             titlesize: "mega",
             titlemargin: "continuumMarginLarge",
@@ -59,6 +60,7 @@ class App extends React.Component {
 
     scrollButton = (event) => {
         event.preventDefault();
+        window.scrollTo(0, this.scrollRef.current.offsetTop);
     };
 
     render() {
@@ -78,9 +80,10 @@ class App extends React.Component {
                     artsHolder={this.state.artsHolder}
                     holder2placer={this.state.holder2placer} />
                 <Gallery />
+                <div ref={this.scrollRef}></div>
             </>
         )
-    }
-}
+    };
+};
 
 export default App;
