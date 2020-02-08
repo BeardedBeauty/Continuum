@@ -4,8 +4,7 @@ import "./style.css";
 function Gallery() {
     return (
         <>
-            <div className="gallery">
-                w
+            <div className="gallery">q
             </div>
         </>
     )

@@ -67,7 +67,7 @@ h2 {
     width: 415px;
     margin-left: -207px;
     margin-bottom: 0px;
-    margin-top: 8px;
+    margin-top: -10px;
     position: absolute;
 }
 
@@ -100,7 +100,7 @@ h2 {
 .holder2PlacerCenter{
     margin-left: -203px;
     transition: .4s;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .holder2PlacerLeft {
@@ -143,7 +143,7 @@ h2 {
 .titleimg {
     width: 100%;
     height: auto;
-    position: fixed;
+    /* position: fixed; */
     z-index: 1;
     margin-top: -200px;
 }

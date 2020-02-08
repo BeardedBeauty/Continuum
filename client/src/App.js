@@ -2,7 +2,7 @@ import React from 'react';
 // import Logo from "./components/Logo";
 import Title from "./components/Title";
 import './App.css';
-import Gallery from './components/Gallery';
+// import Gallery from './components/Gallery';
 
 class App extends React.Component {
     constructor(props) {
@@ -30,7 +30,7 @@ class App extends React.Component {
     scroll = (event) => {
         let scroll = window.scrollY;
         console.log(scroll);
-        scroll > 690 ? this.setState({
+        scroll > 150 ? this.setState({
             titlesize: "scroll",
             titlemargin: "continuumMarginSmall",
             capsC: "capsSmallC",
@@ -64,7 +64,6 @@ class App extends React.Component {
                     continuumPlacer={this.state.continuumPlacer}
                     artsHolder={this.state.artsHolder}
                     holder2placer={this.state.holder2placer} />
-                <Gallery />
             </>
         )
     }
