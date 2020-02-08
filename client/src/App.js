@@ -2,6 +2,7 @@ import React from 'react';
 // import Logo from "./components/Logo";
 import Title from "./components/Title";
 import './App.css';
+import Gallery from './components/Gallery';
 
 class App extends React.Component {
     constructor(props) {
@@ -9,7 +10,12 @@ class App extends React.Component {
         this.state = {
             titlesize: "mega",
             titlemargin: "continuumMarginLarge",
-            capsC: "capsLargeC"
+            capsC: "capsLargeC",
+            capsU: "capsLargeU",
+            holderContinuum: "holder1Large",
+            continuumPlacer: "continuumhalf",
+            artsHolder: "martysartsCenter",
+            holder2placer: "holder2PlacerCenter"
         }
     };
 
@@ -23,14 +29,25 @@ class App extends React.Component {
 
     scroll = (event) => {
         let scroll = window.scrollY;
-        scroll > 100 ? this.setState({
+        console.log(scroll);
+        scroll > 690 ? this.setState({
             titlesize: "scroll",
             titlemargin: "continuumMarginSmall",
-            capsC: "capsSmallC"
+            capsC: "capsSmallC",
+            capsU: "capsSmallU",
+            holderContinuum: "holder1Small",
+            continuumPlacer: "continuumright",
+            artsHolder: "martysartsHalf",
+            holder2placer: "holder2PlacerLeft"
         }) : this.setState({
             titlesize: "mega",
             titlemargin: "continuumMarginLarge",
-            capsC: "capsLargeC"
+            capsC: "capsLargeC",
+            capsU: "capsLargeU",
+            holderContinuum: "holder1Large",
+            continuumPlacer: "continuumhalf",
+            artsHolder: "martysartsCenter",
+            holder2placer: "holder2PlacerCenter"
         });
     };
 
@@ -41,8 +58,13 @@ class App extends React.Component {
                 <Title
                     onscroll={this.scroll}
                     stylesize={this.state.titlesize}
-                    cntuumHolder={this.state.titlemargin}
-                    h1C={this.state.capsC} />
+                    h1C={this.state.capsC}
+                    h1U={this.state.capsU}
+                    cntuumHolder={this.state.holderContinuum}
+                    continuumPlacer={this.state.continuumPlacer}
+                    artsHolder={this.state.artsHolder}
+                    holder2placer={this.state.holder2placer} />
+                <Gallery />
             </>
         )
     }
