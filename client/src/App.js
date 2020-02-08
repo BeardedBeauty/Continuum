@@ -3,6 +3,7 @@ import React from 'react';
 import Title from "./components/Title";
 import Scroll from "./components/Scroll";
 import './App.css';
+import Gallery from './components/Gallery';
 // import Gallery from './components/Gallery';
 
 class App extends React.Component {
@@ -76,6 +77,7 @@ class App extends React.Component {
                     continuumPlacer={this.state.continuumPlacer}
                     artsHolder={this.state.artsHolder}
                     holder2placer={this.state.holder2placer} />
+                <Gallery />
             </>
         )
     }

@@ -11,25 +11,22 @@
     transition: .3s;
     position: fixed;
     z-index: 11;
+    margin-left: -40px;
+    border: 2px solid goldenrod;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
 }
 
 .scrollButton {
     background: #131313ea;
-    width: 80px;
-    height: 80px;
-    border-radius: 100%;
-    border: 2px solid goldenrod;
-    margin-left: -40px;
+    opacity: 1;
 }
 
 .hide {
     background: #13131333;
-    width: 0px;
-    height: 0px;
-    border-radius: 100%;
-    border: 0px;
-    margin-top: 150px;
-    margin-left: 0;
+    opacity: 0;
+    margin-top: 100px;
 }
 
 .arrow{
