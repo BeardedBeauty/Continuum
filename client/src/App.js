@@ -1,6 +1,7 @@
 import React from 'react';
 // import Logo from "./components/Logo";
 import Title from "./components/Title";
+import Scroll from "./components/Scroll";
 import './App.css';
 // import Gallery from './components/Gallery';
 
@@ -15,7 +16,8 @@ class App extends React.Component {
             holderContinuum: "holder1Large",
             continuumPlacer: "continuumhalf",
             artsHolder: "martysartsCenter",
-            holder2placer: "holder2PlacerCenter"
+            holder2placer: "holder2PlacerCenter",
+            scrollButtonVisible: "scrollButton"
         }
     };
 
@@ -49,12 +51,22 @@ class App extends React.Component {
             artsHolder: "martysartsCenter",
             holder2placer: "holder2PlacerCenter"
         });
+
+        scroll > 600 ? this.setState({ scrollButtonVisible: "hide" })
+            : this.setState({ scrollButtonVisible: "scrollButton" });
+    };
+
+    scrollButton = (event) => {
+        event.preventDefault();
     };
 
     render() {
         return (
             <>
                 {/* <Logo /> */}
+                <Scroll
+                    scrollDown={this.scrollButton}
+                    hide={this.state.scrollButtonVisible} />
                 <Title
                     onscroll={this.scroll}
                     stylesize={this.state.titlesize}

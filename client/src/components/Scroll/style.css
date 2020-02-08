@@ -1,0 +1,73 @@
+#scrollCenter {
+    margin-left: 50%;
+    margin-top: auto;
+    margin-bottom: 110px;
+    bottom: 0px;
+    position: fixed;
+    z-index: 10;
+}
+
+#button {
+    transition: .3s;
+    position: fixed;
+    z-index: 11;
+}
+
+.scrollButton {
+    background: #131313ea;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 2px solid goldenrod;
+    margin-left: -40px;
+}
+
+.hide {
+    background: #13131333;
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    border: 0px;
+    margin-top: 150px;
+    margin-left: 0;
+}
+
+.arrow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.arrow span{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid #ffd82a;
+    border-right: 2px solid goldenrod;
+    transform: rotate(45deg);
+    margin-top: -15px;
+    animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+    border-bottom: 2px solid #0995d6;
+    border-right: 2px solid #107eb1;
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+    border-bottom: 2px solid #a017fc;
+    border-right: 2px solid #771dee;
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
