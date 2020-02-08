@@ -1,10 +1,10 @@
 import React from 'react';
+import $ from 'jquery';
 // import Logo from "./components/Logo";
 import Title from "./components/Title";
 import Scroll from "./components/Scroll";
 import './App.css';
 import Gallery from './components/Gallery';
-// import Gallery from './components/Gallery';
 
 class App extends React.Component {
     constructor(props) {
@@ -34,6 +34,7 @@ class App extends React.Component {
 
     scroll = (event) => {
         let scrolling = window.scrollY;
+        console.log(scrolling)
         scrolling > 150 ? this.setState({
             titlesize: "scroll",
             titlemargin: "continuumMarginSmall",
@@ -61,7 +62,12 @@ class App extends React.Component {
     scrollButton = (event) => {
         event ? event.preventDefault() : console.log(event);
         // window.scrollTo(0, this.scrollRef.current.offsetTop);
+        // if (this.hash !== "") {
+        //     let hash = this.hash;
+        //     // $('html, body').animate({ scrollTop: $(hash).offset().top }, 800, function () {
+        //     // window.location.hash = hash;
     };
+
 
     render() {
         return (
@@ -80,7 +86,7 @@ class App extends React.Component {
                     artsHolder={this.state.artsHolder}
                     holder2placer={this.state.holder2placer} />
                 <Gallery />
-                <div ref={this.scrollRef}></div>
+                {/* <div ref={this.scrollRef}></div> */}
             </>
         )
     };
