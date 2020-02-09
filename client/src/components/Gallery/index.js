@@ -4,7 +4,7 @@ import "./style.css";
 function Gallery(props) {
     return (
         <>
-            <div className="gallery" >q
+            <div className="gallery" >
             </div>
         </>
     )

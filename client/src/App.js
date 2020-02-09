@@ -1,9 +1,8 @@
 import React from 'react';
-import $ from 'jquery';
-// import Logo from "./components/Logo";
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from "react-scroll";
+import './App.css';
 import Title from "./components/Title";
 import Scroll from "./components/Scroll";
-import './App.css';
 import Gallery from './components/Gallery';
 
 class App extends React.Component {
@@ -19,8 +18,7 @@ class App extends React.Component {
             continuumPlacer: "continuumhalf",
             artsHolder: "martysartsCenter",
             holder2placer: "holder2PlacerCenter",
-            scrollButtonVisible: "scrollButton",
-            scrollTop: null
+            scrollButtonVisible: "scrollButton"
         }
     };
 
@@ -30,6 +28,15 @@ class App extends React.Component {
 
     componentWillUnmount = () => {
         window.removeEventListener('scroll', this.scroll);
+    };
+
+    scrollTo() {
+        console.log(0)
+        scroller.scrollTo("gallery", {
+            duration: 500,
+            delay: 0,
+            smooth: 'easeInOutQuart'
+        });
     };
 
     scroll = (event) => {
@@ -61,21 +68,18 @@ class App extends React.Component {
 
     scrollButton = (event) => {
         event ? event.preventDefault() : console.log(event);
-        // window.scrollTo(0, this.scrollRef.current.offsetTop);
-        // if (this.hash !== "") {
-        //     let hash = this.hash;
-        //     // $('html, body').animate({ scrollTop: $(hash).offset().top }, 800, function () {
-        //     // window.location.hash = hash;
     };
-
 
     render() {
         return (
             <>
                 {/* <Logo /> */}
-                <Scroll
-                    scrollDown={this.scrollButton}
-                    hide={this.state.scrollButtonVisible} />
+                <span className="test1" to="scrollto" onClick={() => this.scrollTo()} >
+                    <Scroll
+                        scrollDown={this.scrollButton}
+                        hide={this.state.scrollButtonVisible}>
+                    </Scroll>
+                </span>
                 <Title
                     onscroll={this.scroll}
                     stylesize={this.state.titlesize}
@@ -85,8 +89,8 @@ class App extends React.Component {
                     continuumPlacer={this.state.continuumPlacer}
                     artsHolder={this.state.artsHolder}
                     holder2placer={this.state.holder2placer} />
+                <Element name="gallery" className="element" />
                 <Gallery />
-                {/* <div ref={this.scrollRef}></div> */}
             </>
         )
     };
