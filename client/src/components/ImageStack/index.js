@@ -4,7 +4,9 @@ import "./style.css";
 
 function ImageStack(props) {
     return (
-        <img className="stackImage" src={tile1} />
+        <div className="centerStack">
+            <img className="stackImage" src={tile1} />
+        </div>
     )
 };
 

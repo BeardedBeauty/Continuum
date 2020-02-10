@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/BeardedBeauty/Continuum#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "jquery": "^3.4.1",
+    "mongoose": "^5.8.11",
     "react-scroll": "^1.7.16"
   }
 }
