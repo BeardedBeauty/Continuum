@@ -1,8 +1,17 @@
 .gallery {
     width: 100%;
     height: 800px;
-    margin-top: 900px;
+    margin-top: 200px;
     background: #131313ea;
     z-index: 2;
     position: absolute;
+}
+
+.centeredGalleryStack {
+    margin-left: 50%;
+}
+
+.stacks {
+    width: 1000px;
+    margin-left: -500px;
 }

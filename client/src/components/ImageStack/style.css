@@ -1,0 +1,20 @@
+.stackImage {
+    width: 300px;
+    height: auto;
+    /* margin-left: -50%; */
+    padding: 16px;
+    transition: .5s ease;
+    border-top: 2px solid #131313ea;
+    border-bottom: 2px solid #131313ea;
+    border-left: 2px solid #131313ea;
+    border-right: 2px solid #131313ea;
+}
+
+.stackImage:hover {
+    width: 310px;
+    transition: .2s ease;
+    border-top: 2px solid #ffd82a;
+    border-bottom: 2px solid #a37d01;
+    border-left: 2px solid goldenrod;
+    border-right: 2px solid goldenrod;
+}

@@ -4,6 +4,7 @@ import './App.css';
 import Title from "./components/Title";
 import Scroll from "./components/Scroll";
 import Gallery from './components/Gallery';
+import ImageStack from './components/ImageStack';
 
 class App extends React.Component {
     constructor(props) {
@@ -90,7 +91,9 @@ class App extends React.Component {
                     artsHolder={this.state.artsHolder}
                     holder2placer={this.state.holder2placer} />
                 <Element name="gallery" className="element" />
-                <Gallery />
+                <Gallery>
+                    <ImageStack />
+                </Gallery>
             </>
         )
     };

@@ -18,6 +18,11 @@
     border-radius: 100%;
 }
 
+#button:hover {
+    border: 2px solid #ffd82a;
+    transition: .2s;
+}
+
 .scrollButton {
     background: #131313ea;
     opacity: 1;
@@ -30,13 +35,13 @@
     z-index: -1;
 }
 
-.arrow{
+.arrow {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
-.arrow span{
+.arrow span {
     display: block;
     width: 20px;
     height: 20px;

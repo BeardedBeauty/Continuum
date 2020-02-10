@@ -3,10 +3,13 @@ import "./style.css";
 
 function Gallery(props) {
     return (
-        <>
-            <div className="gallery" >
+        <div className="gallery">
+            <div className="centeredGalleryStack">
+                <div className="stacks">
+                    {props.children}
+                </div>
             </div>
-        </>
+        </div>
     )
 };
 
