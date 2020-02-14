@@ -40,7 +40,7 @@ class App extends React.Component {
         });
     };
 
-    scroll = (event) => {
+    scroll = event => {
         let scrolling = window.scrollY;
         console.log(scrolling)
         scrolling > 150 ? this.setState({
