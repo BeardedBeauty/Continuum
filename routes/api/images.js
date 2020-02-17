@@ -1,5 +1,12 @@
-const express = require("express");
-const router = express.Router();
+const router = require("express").Router();
+const image = require("./../../controller/imageController.js");
 
-const Image = require("../../models/image");
+router.route("/")
+    .get(image.findAll)
+    .post(image.create);
 
+router.route("/:id").delete(image.remove);
+// .get(usersController.findById)
+// .put(usersController.update)
+
+module.exports = router;

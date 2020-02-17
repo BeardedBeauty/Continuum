@@ -1,22 +1,33 @@
+
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const path = require("path");
-// const routes = require("./routes/api/images");
+const routes = require("./routes");
+require("dotenv").config();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "client/build")));
-
-const PORT = process.env.PORT || 3004;
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/continuum";
-
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 app.use(express.urlencoded({ extended: true }));
-// app.use("api/images");
+app.use(routes);
 
-// require("./models/bookRoutes.js")(app);
+const PORT = process.env.PORT || 3006;
+let mdb = process.env.MONGODB_URI
+
+mongoose.connect(mdb,
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    }
+).then(() => console.log(`Database connected successfully`)).catch(err => console.log(err));
 
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-app.listen(PORT, () => console.log("port " + PORT));
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow=Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
+app.listen(PORT, () => console.log("port connected: " + PORT));
