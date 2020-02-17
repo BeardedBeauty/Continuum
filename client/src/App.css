@@ -55,6 +55,11 @@ h2 {
 }
 
 .bigG {
-  margin-top: 50px;
+  margin-top: 90px;
   margin-left: -83px;
+}
+
+.img {
+  height: 300px;
+  width: auto;
 }

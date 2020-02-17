@@ -5,12 +5,24 @@ import "./style.css";
 function ImageStack(props) {
     return (
         <>
-            <img className="stackImage" src={tile1} />
-            <img className="stackImage" src={tile1} />
-            <img className="stackImage" src={tile1} />
-            <img className="stackImage" src={tile1} />
-            <img className="stackImage" src={tile1} />
-            <img className="stackImage" src={tile1} />
+            <a href="">
+                <img className="stackImage" src={tile1} />
+            </a>
+            <a href="">
+                <img className="stackImage" src={tile1} />
+            </a>
+            <a href="">
+                <img className="stackImage" src={tile1} />
+            </a>
+            <a href="">
+                <img className="stackImage" src={tile1} />
+            </a>
+            <a href="">
+                <img className="stackImage" src={tile1} />
+            </a>
+            <a href="">
+                <img className="stackImage" src={tile1} />
+            </a>
         </>
     )
 };

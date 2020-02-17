@@ -7,6 +7,8 @@ import Scroll from "./components/Scroll";
 import Gallery from './components/Gallery';
 import ImageStack from './components/ImageStack';
 import "./assets/Fonts/CELTG___.TTF";
+import Images from './components/Images';
+import Image from "./components/Image"
 
 class App extends React.Component {
     constructor(props) {
@@ -22,7 +24,8 @@ class App extends React.Component {
             artsHolder: "martysartsCenter",
             holder2placer: "holder2PlacerCenter",
             scrollButtonVisible: "scrollButton",
-            images: []
+            images: [],
+            gallerytitle: "G a l l e r y"
         }
     };
 
@@ -103,11 +106,14 @@ class App extends React.Component {
                     holder2placer={this.state.holder2placer} />
                 <Element name="gallery" className="element" />
                 <div className="gallerytitle">
-                    <h2 className="bigG">G a l l e r y</h2>
+                    <h2 className="bigG">{this.state.gallerytitle}</h2>
                 </div>
                 <Gallery>
                     <ImageStack />
                 </Gallery>
+                <Images>
+                    {this.state.images.map(image => <Image link={image.url} />)}
+                </Images>
             </>
         )
     };
