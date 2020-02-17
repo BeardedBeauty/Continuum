@@ -10,22 +10,7 @@ function ImageStack(props) {
             <img className="stackImage" src={tile1} />
             <img className="stackImage" src={tile1} />
             <img className="stackImage" src={tile1} />
-
-            {/* <div className="stackLeft">
-                <img className="stackImage" src={tile1} />
-            </div>
-            <div className="stackLeft">
-                <img className="stackImage" src={tile1} />
-            </div>
-            <div className="stackLeft">
-                <img className="stackImage" src={tile1} />
-            </div>
-            <div className="stackLeft">
-                <img className="stackImage" src={tile1} />
-            </div>
-            <div className="stackLeft">
-                <img className="stackImage" src={tile1} />
-            </div> */}
+            <img className="stackImage" src={tile1} />
         </>
     )
 };
