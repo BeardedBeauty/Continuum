@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from "react-scroll";
 import './App.css';
+import api from "./utils/API";
 import Title from "./components/Title";
 import Scroll from "./components/Scroll";
 import Gallery from './components/Gallery';
@@ -19,16 +20,25 @@ class App extends React.Component {
             continuumPlacer: "continuumhalf",
             artsHolder: "martysartsCenter",
             holder2placer: "holder2PlacerCenter",
-            scrollButtonVisible: "scrollButton"
+            scrollButtonVisible: "scrollButton",
+            images: []
         }
     };
 
     componentDidMount = () => {
         window.addEventListener('scroll', this.scroll);
+        this.pull();
     };
 
     componentWillUnmount = () => {
         window.removeEventListener('scroll', this.scroll);
+    };
+
+    pull = () => {
+        api.getImages().then(res => {
+            console.log(res.data);
+            this.setState({ images: res.data });
+        }).catch(err => console.log(err));
     };
 
     scrollTo() {
