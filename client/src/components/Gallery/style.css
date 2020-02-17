@@ -1,10 +1,11 @@
 .gallery {
     width: 100%;
     height: 800px;
-    margin-top: 200px;
+    margin-top: 120px;
     background: #131313ea;
     z-index: 2;
     position: absolute;
+    text-align: center;
 }
 
 .centeredGalleryStack {

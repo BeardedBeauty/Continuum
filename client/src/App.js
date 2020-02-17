@@ -6,6 +6,7 @@ import Title from "./components/Title";
 import Scroll from "./components/Scroll";
 import Gallery from './components/Gallery';
 import ImageStack from './components/ImageStack';
+import "./assets/Fonts/CELTG___.TTF";
 
 class App extends React.Component {
     constructor(props) {
@@ -101,6 +102,9 @@ class App extends React.Component {
                     artsHolder={this.state.artsHolder}
                     holder2placer={this.state.holder2placer} />
                 <Element name="gallery" className="element" />
+                <div className="gallerytitle">
+                    <h2 className="bigG">G a l l e r y</h2>
+                </div>
                 <Gallery>
                     <ImageStack />
                 </Gallery>

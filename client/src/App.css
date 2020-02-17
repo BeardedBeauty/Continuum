@@ -38,6 +38,23 @@ body {
   background: #131313;
 }
 
-html {
-  scroll-behavior: smooth;
+h2 {
+  font-family: 'Celtic Garamond the 2nd';
+  color: #ffd82a;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: 'Celtic Garamond the 2nd';
+  src: local("CELTG___"), url(./assets/Fonts/CELTG___.TTF) format('truetype');
+}
+
+.gallerytitle {
+  margin-left: 50%;
+}
+
+.bigG {
+  margin-top: 50px;
+  margin-left: -83px;
 }
