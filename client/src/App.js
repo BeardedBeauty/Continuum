@@ -25,7 +25,8 @@ class App extends React.Component {
             holder2placer: "holder2PlacerCenter",
             scrollButtonVisible: "scrollButton",
             images: [],
-            gallerytitle: "G a l l e r y"
+            gallerytitle: "G a l l e r y",
+            imagedisplay: ""
         }
     };
 
@@ -111,7 +112,7 @@ class App extends React.Component {
                 <Gallery>
                     <ImageStack />
                 </Gallery>
-                <Images>
+                <Images display={this.state.imagedisplay}>
                     {this.state.images.map(image => <Image link={image.url} />)}
                 </Images>
             </>
