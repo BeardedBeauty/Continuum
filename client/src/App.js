@@ -52,7 +52,7 @@ class App extends React.Component {
 
     scroll = event => {
         let scrolling = window.scrollY;
-        console.log(scrolling)
+        // console.log(scrolling)
         scrolling > 150 ? this.setState({
             titlesize: "scroll",
             titlemargin: "continuumMarginSmall",

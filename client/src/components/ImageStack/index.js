@@ -4,9 +4,29 @@ import "./style.css";
 
 function ImageStack(props) {
     return (
-        <div className="centerStack">
+        <>
             <img className="stackImage" src={tile1} />
-        </div>
+            <img className="stackImage" src={tile1} />
+            <img className="stackImage" src={tile1} />
+            <img className="stackImage" src={tile1} />
+            <img className="stackImage" src={tile1} />
+
+            {/* <div className="stackLeft">
+                <img className="stackImage" src={tile1} />
+            </div>
+            <div className="stackLeft">
+                <img className="stackImage" src={tile1} />
+            </div>
+            <div className="stackLeft">
+                <img className="stackImage" src={tile1} />
+            </div>
+            <div className="stackLeft">
+                <img className="stackImage" src={tile1} />
+            </div>
+            <div className="stackLeft">
+                <img className="stackImage" src={tile1} />
+            </div> */}
+        </>
     )
 };
 

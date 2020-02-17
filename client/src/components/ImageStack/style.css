@@ -1,7 +1,8 @@
 .stackImage {
     width: 300px;
     height: auto;
-    margin-left: -150px;
+    margin-left: 50px;
+    margin-right: 50px;
     padding: 16px;
     transition: .5s ease;
     border-top: 2px solid #131313ea;
@@ -12,16 +13,23 @@
 }
 
 .stackImage:hover {
-    width: 310px;
+    /* width: 310px; */
     transition: .2s ease;
-    margin-left: -155px;
-    margin-top: -3px;
+    /* margin-left: -155px; */
+    /* margin-top: -3px; */
     border-top: 2px solid #ffd82a;
     border-bottom: 2px solid #a37d01;
     border-left: 2px solid goldenrod;
     border-right: 2px solid goldenrod;
 }
 
-.centerStack {
-    margin-left: 300px;
+.stackLeft {
+    margin-left: 10%;
+    margin-right: 10%;
+    float: left;
+}
+
+.stackRight {
+    float: right;
+    margin-right: 300px;
 }
