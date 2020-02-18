@@ -16,6 +16,9 @@ import "./style.css";
 function ImageStack(props) {
     return (
         <>
+            <Link to="/fineart">
+                <img className="stackImage" src={fineart} />
+            </Link>
             <a href="" onClick={q => q.preventDefault()}>
                 <img className="stackImage" src={fineart} />
             </a>
