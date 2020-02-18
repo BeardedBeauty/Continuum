@@ -2,6 +2,12 @@ import React from 'react';
 import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from "react-scroll";
 import './App.css';
 import api from "./utils/API";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 import Title from "./components/Title";
 import Scroll from "./components/Scroll";
 import Gallery from './components/Gallery';
@@ -117,9 +123,15 @@ class App extends React.Component {
                 <div className="gallerytitle">
                     <h2 className="bigG">{this.state.gallerytitle}</h2>
                 </div>
-                <Gallery>
+                <Router>
+                    <Switch>
+                        <Route path="/" exact component={Gallery} />
+                        <Route path="/saved" component={Saved} />
+                    </Switch>
+                </Router>
+                {/* <Gallery>
                     <ImageStack />
-                </Gallery>
+                </Gallery> */}
                 <br />
                 <img className="aboutimg" src="./assets/Images/about.JPG" alt="about" />
             </div>
