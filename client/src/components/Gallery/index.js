@@ -7,6 +7,7 @@ import {
     Link
 } from "react-router-dom";
 import GalleryFolders from "../GalleryFolders";
+import Fineart from "./../../pages/Fineart.js";
 
 class Gallery extends React.Component {
     render() {
@@ -14,7 +15,7 @@ class Gallery extends React.Component {
             <Router>
                 <Switch>
                     <Route path="/" exact component={GalleryFolders} />
-                    {/* <Route path="/fineart" component={} /> */}
+                    <Route path="/fineart" component={Fineart} />
                 </Switch>
             </Router>
         )
