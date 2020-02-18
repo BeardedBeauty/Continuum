@@ -3,9 +3,14 @@ import "./style.css";
 
 function Images(props) {
     return (
-        <div className="holderbox">
-            {props.children}
-        </div>
+        <>
+            <div className="dimmedbg"></div>
+            <div className="centerholderbox">
+                <div className="holderbox">
+                    {props.children}
+                </div>
+            </div>
+        </>
     )
 };
 
