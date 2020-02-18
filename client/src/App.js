@@ -1,13 +1,7 @@
 import React from 'react';
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from "react-scroll";
+import { DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from "react-scroll";
 import './App.css';
 import api from "./utils/API";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
 import Title from "./components/Title";
 import Scroll from "./components/Scroll";
 import Gallery from './components/Gallery';
@@ -63,7 +57,7 @@ class App extends React.Component {
 
     scroll = event => {
         let scrolling = window.scrollY;
-        // console.log(scrolling)
+        // console.log(scrolling);
         scrolling > 150 ? this.setState({
             titlesize: "scroll",
             titlemargin: "continuumMarginSmall",
@@ -102,14 +96,14 @@ class App extends React.Component {
                         hide={this.state.scrollButtonVisible}>
                     </Scroll>
                 </span>
-                <Images display={this.state.imagedisplay}>
+                {/* <Images display={this.state.imagedisplay}>
                     {this.state.images.map(image =>
                         <Image
                             link={image.url}
                             key={image._id}
                         />
                     )}
-                </Images>
+                </Images> */}
                 <Title
                     onscroll={this.scroll}
                     stylesize={this.state.titlesize}
@@ -123,12 +117,7 @@ class App extends React.Component {
                 <div className="gallerytitle">
                     <h2 className="bigG">{this.state.gallerytitle}</h2>
                 </div>
-                <Router>
-                    <Switch>
-                        <Route path="/" exact component={Gallery} />
-                        <Route path="/saved" component={Saved} />
-                    </Switch>
-                </Router>
+                <Gallery />
                 {/* <Gallery>
                     <ImageStack />
                 </Gallery> */}
