@@ -1,13 +1,14 @@
 .holderbox {
     width: 1000px;
     height: 100%;
-    position: absolute;
-    display: hidden;
+    position: fixed;
+    /* display: hidden; */
     overflow: scroll;
     /* background-color: red; */
     margin-left: -500px;
     z-index: 9;
-    align-content: center;
+    text-align: center;
+
 }
 
 .centerholderbox {
@@ -21,4 +22,6 @@
     opacity: .9;
     z-index: 8;
     background-color: aqua;
+    position: fixed;
+    margin-top: 0;
 }

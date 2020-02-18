@@ -88,7 +88,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <>
+            <div className="inheritScroll">
                 {/* <Logo /> */}
                 <span className="test1" to="scrollto" onClick={() => this.scrollTo()} >
                     <Scroll
@@ -96,6 +96,14 @@ class App extends React.Component {
                         hide={this.state.scrollButtonVisible}>
                     </Scroll>
                 </span>
+                <Images display={this.state.imagedisplay}>
+                    {this.state.images.map(image =>
+                        <Image
+                            link={image.url}
+                            key={image._id}
+                        />
+                    )}
+                </Images>
                 <Title
                     onscroll={this.scroll}
                     stylesize={this.state.titlesize}
@@ -105,17 +113,16 @@ class App extends React.Component {
                     continuumPlacer={this.state.continuumPlacer}
                     artsHolder={this.state.artsHolder}
                     holder2placer={this.state.holder2placer} />
-                <Element name="gallery" className="element" />
+                <Element name="gallery" className="element elementmargin" />
                 <div className="gallerytitle">
                     <h2 className="bigG">{this.state.gallerytitle}</h2>
                 </div>
                 <Gallery>
                     <ImageStack />
                 </Gallery>
-                <Images display={this.state.imagedisplay}>
-                    {this.state.images.map(image => <Image link={image.url} />)}
-                </Images>
-            </>
+                <br />
+                <img className="aboutimg" src="./assets/Images/about.JPG" alt="about" />
+            </div>
         )
     };
 };

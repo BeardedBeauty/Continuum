@@ -55,7 +55,7 @@ h2 {
 }
 
 .bigG {
-  margin-top: 90px;
+  margin-top: 120px;
   margin-left: -83px;
 }
 
@@ -63,4 +63,21 @@ h2 {
   height: 300px;
   width: auto;
   margin-top: 100px;
+}
+
+.elementmargin {
+  margin-top: -82px;
+}
+
+.aboutimg {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  z-index: 0;
+}
+
+.inheritScroll {
+  margin: 0;
+  height: 100%; 
+  overflow: hidden;
 }
