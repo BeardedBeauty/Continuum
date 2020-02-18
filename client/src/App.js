@@ -2,13 +2,14 @@ import React from 'react';
 import { DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from "react-scroll";
 import './App.css';
 import api from "./utils/API";
+import about from "./assets/Images/about.JPG"
 import Title from "./components/Title";
 import Scroll from "./components/Scroll";
 import Gallery from './components/Gallery';
 import ImageStack from './components/ImageStack';
 import "./assets/Fonts/CELTG___.TTF";
 import Images from './components/Images';
-import Image from "./components/Image"
+import Image from "./components/Image";
 
 class App extends React.Component {
     constructor(props) {
@@ -118,11 +119,8 @@ class App extends React.Component {
                     <h2 className="bigG">{this.state.gallerytitle}</h2>
                 </div>
                 <Gallery />
-                {/* <Gallery>
-                    <ImageStack />
-                </Gallery> */}
                 <br />
-                <img className="aboutimg" src="./assets/Images/about.JPG" alt="about" />
+                <img className="aboutimg" src={about} alt="about" />
             </div>
         )
     };

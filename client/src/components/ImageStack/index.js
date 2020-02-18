@@ -1,27 +1,32 @@
 import React from "react";
-import tile1 from "../../assets/Images/tile1.JPG";
+import fineart from "../../assets/Images/fart.tiff";
+import leather from "../../assets/Images/lart.JPG";
+import misc from "../../assets/Images/misc.png";
+import murals from "../../assets/Images/mrls.png";
+import signs from "../../assets/Images/signs.png";
+import illust from "../../assets/Images/ills.png";
 import "./style.css";
 
 function ImageStack(props) {
     return (
         <>
-            <a href="">
-                <img className="stackImage" src={tile1} />
+            <a href="" onClick={q => q.preventDefault()}>
+                <img className="stackImage" src={fineart} />
             </a>
             <a href="">
-                <img className="stackImage" src={tile1} />
+                <img className="stackImage" src={leather} />
             </a>
             <a href="">
-                <img className="stackImage" src={tile1} />
+                <img className="stackImage" src={murals} />
             </a>
             <a href="">
-                <img className="stackImage" src={tile1} />
+                <img className="stackImage" src={signs} />
             </a>
             <a href="">
-                <img className="stackImage" src={tile1} />
+                <img className="stackImage" src={illust} />
             </a>
             <a href="">
-                <img className="stackImage" src={tile1} />
+                <img className="stackImage" src={misc} />
             </a>
         </>
     )

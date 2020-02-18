@@ -72,12 +72,5 @@ h2 {
 .aboutimg {
   width: 100%;
   height: auto;
-  position: fixed;
   z-index: 0;
-}
-
-.inheritScroll {
-  margin: 0;
-  height: 100%; 
-  overflow: hidden;
 }

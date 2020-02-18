@@ -1,9 +1,9 @@
 .stackImage {
     width: 300px;
     height: auto;
-    margin-left: 82px;
-    margin-right: 82px;
-    margin-bottom: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 20px;
     padding: 16px;
     transition: .5s ease;
     border-top: 2px solid #131313ea;

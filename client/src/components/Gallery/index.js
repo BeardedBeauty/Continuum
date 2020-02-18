@@ -14,7 +14,7 @@ class Gallery extends React.Component {
             <Router>
                 <Switch>
                     <Route path="/" exact component={GalleryFolders} />
-                    {/* <Route path="/saved" component={Saved} /> */}
+                    {/* <Route path="/fineart" component={} /> */}
                 </Switch>
             </Router>
         )
