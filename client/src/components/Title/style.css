@@ -162,6 +162,14 @@ h2 {
     .titleimg {
         margin-top: 208px;
     }
+
+    .capsLargeC {
+        font-size: 30px;
+    }
+
+    .capsLargeU {
+        font-size: 25px;
+    }
     
     .capsSmallC {
         margin-top: 20px;
@@ -179,10 +187,12 @@ h2 {
 
     .holder1Small {
         height: 80px;
-        margin-left: -180px;
-        margin-bottom: 0px;
+        margin-left: -170px;;
         margin-top: -40px;
-        position: absolute;
+    }
+
+    .holder1Large {
+        margin-left: -170px;
     }
 
     .martysartsHalf {
@@ -190,11 +200,11 @@ h2 {
     }
 
     .holder2PlacerLeft {
-        margin-left: -180px;
+        margin-left: -170px;
     }
 
     .holder2PlacerCenter{
-        margin-left: -160px;
+        margin-left: -170px;
         transition: .4s;
         margin-top: 20px;
     }
