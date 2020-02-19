@@ -60,7 +60,7 @@ h2 {
 .holder1Large {
     height: 80px;
     width: 415px;
-    margin-left: -207px;
+    margin-left: -200px;
     margin-bottom: 0px;
     margin-top: -10px;
     position: absolute;
@@ -90,6 +90,7 @@ h2 {
     height: 80px;
     width: 406px;
     margin-bottom: 0px;
+    transition: .3s;
 }
 
 .holder2PlacerCenter{
@@ -154,15 +155,17 @@ h2 {
 }
 
 @media screen and (max-width: 999px) {/*and (min-width: 64){*/
+    h2 {
+        font-size: 18px;
+    }
+
     .titleimg {
         margin-top: 208px;
     }
-
-    .capsLargeC {
-        font-size: 20px;
-    }
     
     .capsSmallC {
+        margin-top: 20px;
+        margin-right: 12px;
         font-size: 20px;
     }
     
@@ -171,6 +174,28 @@ h2 {
     }
     
     .scroll {
-        height: 15px;
+        height: 100px;
+    }
+
+    .holder1Small {
+        height: 80px;
+        margin-left: -180px;
+        margin-bottom: 0px;
+        margin-top: -40px;
+        position: absolute;
+    }
+
+    .martysartsHalf {
+        margin-left: 50%;
+    }
+
+    .holder2PlacerLeft {
+        margin-left: -180px;
+    }
+
+    .holder2PlacerCenter{
+        margin-left: -160px;
+        transition: .4s;
+        margin-top: 20px;
     }
 }
