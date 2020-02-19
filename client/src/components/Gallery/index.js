@@ -61,14 +61,39 @@ class Gallery extends React.Component {
             <>
                 {/* <button onClick={this.click}>r</button> */}
                 <Router>
-                    {/* <Switch>
-                    <Route path="/" exact component={GalleryFolders} />
-                    <Route path="/fineart"
-                        render={(props) => <Fineart {...props}
-                            images={this.state.images.fineart}
-                        />}
-                    />
-                </Switch> */}
+                    <Switch>
+                        <Route path="/" exact component={GalleryFolders} />
+                        <Route path="/fineart"
+                            render={(props) => <Fineart {...props}
+                                images={this.state.images.fineart}
+                            />}
+                        />
+                        <Route path="/leather"
+                            render={(props) => <Fineart {...props}
+                                images={this.state.images.leather}
+                            />}
+                        />
+                        <Route path="/illustrations"
+                            render={(props) => <Fineart {...props}
+                                images={this.state.images.illust}
+                            />}
+                        />
+                        <Route path="/murals"
+                            render={(props) => <Fineart {...props}
+                                images={this.state.images.murals}
+                            />}
+                        />
+                        <Route path="/signs"
+                            render={(props) => <Fineart {...props}
+                                images={this.state.images.signs}
+                            />}
+                        />
+                        <Route path="/misc"
+                            render={(props) => <Fineart {...props}
+                                images={this.state.images.misc}
+                            />}
+                        />
+                    </Switch>
                 </Router>
             </>
         )

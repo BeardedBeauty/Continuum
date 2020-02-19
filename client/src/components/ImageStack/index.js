@@ -13,28 +13,27 @@ import signs from "../../assets/Images/signs.png";
 import illust from "../../assets/Images/ills.png";
 import "./style.css";
 
-function ImageStack(props) {
-    // console.log(props)
+function ImageStack() {
     return (
         <>
             <Link to="/fineart">
                 <img className="stackImage" src={fineart} />
             </Link>
-            <a href="">
+            <Link to="/leather">
                 <img className="stackImage" src={leather} />
-            </a>
-            <a href="">
+            </Link>
+            <Link to="/murals">
                 <img className="stackImage" src={murals} />
-            </a>
-            <a href="">
+            </Link>
+            <Link to="/signs">
                 <img className="stackImage" src={signs} />
-            </a>
-            <a href="">
+            </Link>
+            <Link to="/illustrations">
                 <img className="stackImage" src={illust} />
-            </a>
-            <a href="">
+            </Link>
+            <Link to="/misc">
                 <img className="stackImage" src={misc} />
-            </a>
+            </Link>
         </>
     )
 };
