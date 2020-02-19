@@ -47,7 +47,6 @@ h2 {
 
 .capsLargeU {
     margin-top: 20px;
-    margin-top: 20px;
 }
 
 .non {
@@ -152,4 +151,22 @@ h2 {
 .centerwords {
     width: 1200px;
     margin-left: -600px;
+}
+
+@media screen and (max-width: 999px) {/*and (min-width: 64){*/
+    .titleimg {
+        margin-top: 208px;
+    }
+
+    .capsLargeC {
+        font-size: auto;
+    }
+    
+    .capsSmallC {
+        font-size: auto;
+    }
+    
+    .capsSmallU {
+        font-size: auto;
+    }
 }
