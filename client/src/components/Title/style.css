@@ -169,4 +169,8 @@ h2 {
     .capsSmallU {
         font-size: auto;
     }
+    
+    .scroll {
+        height: 100px;
+    }
 }
