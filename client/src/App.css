@@ -36,6 +36,7 @@
 
 body {
   background: #131313;
+  height: 100%;
 }
 
 h2 {
@@ -86,6 +87,15 @@ h2 {
     filter        : blur(5px) !important;
 }
 
+.bio {
+  color: #131313;
+  position: absolute;
+  margin-top: -500px;
+  width: 500px;
+  margin-left: 20px;
+  z-index: 2;
+}
+
 .aboutCoverBio {
   position: absolute;
   background: #1313139f;
@@ -105,6 +115,15 @@ h2 {
 @media screen and (max-width: 999px) {/*and (min-width: 64){*/
   .elementmargin {
     margin-top: -112px;
+  }
+
+  .pusher {
+    height: 300px;
+  }
+
+  .wrapper {
+    min-height: 100%;
+    margin-bottom: -300px;
   }
 
   .aboutimg {
