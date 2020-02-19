@@ -50,6 +50,11 @@ h2 {
   src: local("CELTG___"), url(./assets/Fonts/CELTG___.TTF) format('truetype');
 }
 
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -300px;
+}
+
 .gallerytitle {
   margin-left: 50%;
 }
@@ -74,6 +79,11 @@ h2 {
   width: 100%;
   height: auto;
   z-index: 0;
+  -webkit-filter: blur(5px) !important;
+    -moz-filter   : blur(5px) !important;
+    -o-filter     : blur(5px) !important;
+    -ms-filter    : blur(5px) !important;
+    filter        : blur(5px) !important;
 }
 
 .aboutCoverBio {
@@ -88,8 +98,24 @@ h2 {
   margin-bottom: -900px; */
 }
 
+.pusher {
+  height: 300px;
+}
+
 @media screen and (max-width: 999px) {/*and (min-width: 64){*/
   .elementmargin {
     margin-top: -112px;
+  }
+
+  .aboutimg {
+    width: 1000px;
+    height: auto;
+    float: right;
+    margin-top: 50px;
+    -webkit-filter: blur(5px) !important;
+    -moz-filter   : blur(5px) !important;
+    -o-filter     : blur(5px) !important;
+    -ms-filter    : blur(5px) !important;
+    filter        : blur(5px) !important;
   }
 }

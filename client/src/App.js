@@ -76,35 +76,35 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="inheritScroll">
-                {/* <Logo /> */}
-                <span className="test1" to="scrollto" onClick={() => this.scrollTo()} >
-                    <Scroll
-                        scrollDown={this.scrollButton}
-                        hide={this.state.scrollButtonVisible}>
-                    </Scroll>
-                </span>
-                <Title
-                    onscroll={this.scroll}
-                    stylesize={this.state.titlesize}
-                    h1C={this.state.capsC}
-                    h1U={this.state.capsU}
-                    cntuumHolder={this.state.holderContinuum}
-                    continuumPlacer={this.state.continuumPlacer}
-                    artsHolder={this.state.artsHolder}
-                    holder2placer={this.state.holder2placer} />
-                <Element name="gallery" className="element elementmargin" />
-                <div className="gallerytitle">
-                    <h2 className="bigG">{this.state.gallerytitle}</h2>
-                </div>
-                <Gallery />
-                <br />
-                <div>
-                    <div className="aboutCoverBio"></div>
+            <>
+                <div className="wrapper">
+                    {/* <Logo /> */}
+                    <span className="test1" to="scrollto" onClick={() => this.scrollTo()} >
+                        <Scroll
+                            scrollDown={this.scrollButton}
+                            hide={this.state.scrollButtonVisible}>
+                        </Scroll>
+                    </span>
+                    <Title
+                        onscroll={this.scroll}
+                        stylesize={this.state.titlesize}
+                        h1C={this.state.capsC}
+                        h1U={this.state.capsU}
+                        cntuumHolder={this.state.holderContinuum}
+                        continuumPlacer={this.state.continuumPlacer}
+                        artsHolder={this.state.artsHolder}
+                        holder2placer={this.state.holder2placer} />
+                    <Element name="gallery" className="element elementmargin" />
+                    <div className="gallerytitle">
+                        <h2 className="bigG">{this.state.gallerytitle}</h2>
+                    </div>
+                    <Gallery />
+                    <br />
                     <img className="aboutimg" src={about} alt="about" />
+                    <div className="pusher"></div>
                 </div>
                 <Footer />
-            </div>
+            </>
         )
     };
 };
