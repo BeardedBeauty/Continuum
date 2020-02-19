@@ -14,14 +14,12 @@ import illust from "../../assets/Images/ills.png";
 import "./style.css";
 
 function ImageStack(props) {
+    // console.log(props)
     return (
         <>
             <Link to="/fineart">
                 <img className="stackImage" src={fineart} />
             </Link>
-            <a href="" onClick={q => q.preventDefault()}>
-                <img className="stackImage" src={fineart} />
-            </a>
             <a href="">
                 <img className="stackImage" src={leather} />
             </a>

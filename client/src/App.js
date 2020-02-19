@@ -33,7 +33,7 @@ class App extends React.Component {
 
     componentDidMount = () => {
         window.addEventListener('scroll', this.scroll);
-        this.pull();
+        // this.pull();
     };
 
     componentWillUnmount = () => {

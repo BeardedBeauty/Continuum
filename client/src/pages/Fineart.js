@@ -2,9 +2,10 @@ import React from "react";
 // import "./style.css";
 
 function Images(props) {
+    console.log(props.images)
     return (
         <>
-            <h1>bubbles</h1>
+            <p>{props.images}</p>
         </>
     )
 };
