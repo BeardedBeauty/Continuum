@@ -1,15 +1,11 @@
 import React from 'react';
 import { DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from "react-scroll";
 import './App.css';
-import api from "./utils/API";
 import about from "./assets/Images/about.JPG"
 import Title from "./components/Title";
 import Scroll from "./components/Scroll";
 import Gallery from './components/Gallery';
-import ImageStack from './components/ImageStack';
 import "./assets/Fonts/CELTG___.TTF";
-import Images from './components/Images';
-import Image from "./components/Image";
 
 class App extends React.Component {
     constructor(props) {
@@ -25,26 +21,16 @@ class App extends React.Component {
             artsHolder: "martysartsCenter",
             holder2placer: "holder2PlacerCenter",
             scrollButtonVisible: "scrollButton",
-            images: [],
             gallerytitle: "G a l l e r y",
-            imagedisplay: ""
         }
     };
 
     componentDidMount = () => {
         window.addEventListener('scroll', this.scroll);
-        // this.pull();
     };
 
     componentWillUnmount = () => {
         window.removeEventListener('scroll', this.scroll);
-    };
-
-    pull = () => {
-        api.getImages().then(res => {
-            console.log(res.data);
-            this.setState({ images: res.data });
-        }).catch(err => console.log(err));
     };
 
     scrollTo() {
@@ -97,14 +83,6 @@ class App extends React.Component {
                         hide={this.state.scrollButtonVisible}>
                     </Scroll>
                 </span>
-                {/* <Images display={this.state.imagedisplay}>
-                    {this.state.images.map(image =>
-                        <Image
-                            link={image.url}
-                            key={image._id}
-                        />
-                    )}
-                </Images> */}
                 <Title
                     onscroll={this.scroll}
                     stylesize={this.state.titlesize}

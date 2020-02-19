@@ -28,7 +28,6 @@ class Gallery extends React.Component {
     componentWillMount() {
         api.getImages().then(res => {
             let e = res.data;
-            // this.setState({ images: res.data });
             for (let w = 0; w < e.length; w++) {
                 if (e[w].arttype === "fineart") {
                     this.state.images.fineart.push(e[w].url);
@@ -52,50 +51,43 @@ class Gallery extends React.Component {
         }).catch(err => console.log(err));
     };
 
-    // click = () => {
-    //     console.log(this.state.images);
-    // }
-
     render() {
         return (
-            <>
-                {/* <button onClick={this.click}>r</button> */}
-                <Router>
-                    <Switch>
-                        <Route path="/" exact component={GalleryFolders} />
-                        <Route path="/fineart"
-                            render={(props) => <Fineart {...props}
-                                images={this.state.images.fineart}
-                            />}
-                        />
-                        <Route path="/leather"
-                            render={(props) => <Fineart {...props}
-                                images={this.state.images.leather}
-                            />}
-                        />
-                        <Route path="/illustrations"
-                            render={(props) => <Fineart {...props}
-                                images={this.state.images.illust}
-                            />}
-                        />
-                        <Route path="/murals"
-                            render={(props) => <Fineart {...props}
-                                images={this.state.images.murals}
-                            />}
-                        />
-                        <Route path="/signs"
-                            render={(props) => <Fineart {...props}
-                                images={this.state.images.signs}
-                            />}
-                        />
-                        <Route path="/misc"
-                            render={(props) => <Fineart {...props}
-                                images={this.state.images.misc}
-                            />}
-                        />
-                    </Switch>
-                </Router>
-            </>
+            <Router>
+                <Switch>
+                    <Route path="/" exact component={GalleryFolders} />
+                    <Route path="/fineart"
+                        render={props => <Fineart {...props}
+                            images={this.state.images.fineart}
+                        />}
+                    />
+                    <Route path="/leather"
+                        render={props => <Fineart {...props}
+                            images={this.state.images.leather}
+                        />}
+                    />
+                    <Route path="/illustrations"
+                        render={props => <Fineart {...props}
+                            images={this.state.images.illust}
+                        />}
+                    />
+                    <Route path="/murals"
+                        render={props => <Fineart {...props}
+                            images={this.state.images.murals}
+                        />}
+                    />
+                    <Route path="/signs"
+                        render={props => <Fineart {...props}
+                            images={this.state.images.signs}
+                        />}
+                    />
+                    <Route path="/misc"
+                        render={props => <Fineart {...props}
+                            images={this.state.images.misc}
+                        />}
+                    />
+                </Switch>
+            </Router>
         )
     }
 };
