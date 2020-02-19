@@ -159,18 +159,18 @@ h2 {
     }
 
     .capsLargeC {
-        font-size: auto;
+        font-size: 20px;
     }
     
     .capsSmallC {
-        font-size: auto;
+        font-size: 20px;
     }
     
     .capsSmallU {
-        font-size: auto;
+        font-size: 15px;
     }
     
     .scroll {
-        height: 100px;
+        height: 15px;
     }
 }
