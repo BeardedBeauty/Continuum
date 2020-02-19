@@ -74,3 +74,15 @@ h2 {
   height: auto;
   z-index: 0;
 }
+
+.aboutCoverBio {
+  position: absolute;
+  background: #1313139f;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  margin-top: 500px;
+
+  /* margin-top: 500px;
+  margin-bottom: -900px; */
+}

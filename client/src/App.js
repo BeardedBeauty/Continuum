@@ -6,6 +6,7 @@ import Title from "./components/Title";
 import Scroll from "./components/Scroll";
 import Gallery from './components/Gallery';
 import "./assets/Fonts/CELTG___.TTF";
+import Footer from './components/Footer/Index';
 
 class App extends React.Component {
     constructor(props) {
@@ -98,7 +99,11 @@ class App extends React.Component {
                 </div>
                 <Gallery />
                 <br />
-                <img className="aboutimg" src={about} alt="about" />
+                <div>
+                    <div className="aboutCoverBio"></div>
+                    <img className="aboutimg" src={about} alt="about" />
+                </div>
+                <Footer />
             </div>
         )
     };
