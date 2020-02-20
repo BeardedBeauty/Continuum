@@ -33,6 +33,9 @@
   }
 }
 
+p {
+  font-size: large;
+}
 
 body {
   background: #131313;
@@ -61,6 +64,7 @@ h2 {
   height: 300px;
   width: auto;
   margin-top: 100px;
+  float: left;
 }
 
 .elementmargin {
@@ -81,14 +85,18 @@ h2 {
   width: 100%;
   height: auto;
   z-index: 0;
-  -webkit-filter: blur(5px) !important;
+  /* -webkit-filter: blur(5px) !important;
     -moz-filter   : blur(5px) !important;
     -o-filter     : blur(5px) !important;
     -ms-filter    : blur(5px) !important;
-    filter        : blur(5px) !important;
+    filter        : blur(5px) !important; */
     opacity: .2;
 }
 
+.whatThe {
+  width: 100%;
+  float: left;
+}
 .aboutCoverBio {
   position: absolute;
   background: #131313;
@@ -110,10 +118,10 @@ h2 {
 
 .cssSadness {
   position: absolute;
-  margin-top: 900px;
   padding: 0;
   text-align: center;
-  width: 100%
+  width: 100%;
+  position: relative;
 }
 
 .center {
@@ -127,7 +135,6 @@ h2 {
   width: 100%;
   margin-bottom: -400px;
   margin-left: -50%;
-  text-size-adjust: 15px;
 }
 
 @media screen and (max-width: 999px) {/*and (min-width: 64){*/
@@ -139,7 +146,7 @@ h2 {
     width: 1000px;
     height: auto;
     float: right;
-    opacity: .3;
+    opacity: .2;
     -webkit-filter: blur(5px) !important;
     -moz-filter   : blur(5px) !important;
     -o-filter     : blur(5px) !important;
@@ -158,6 +165,12 @@ h2 {
   }
 
   .cssSadness {
+    margin-top: 200px;
     float: right;
+  }
+
+  .bio {
+    width: 180%;
+    margin-left: -90%;
   }
 }
