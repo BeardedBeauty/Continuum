@@ -1,6 +1,8 @@
 .footerContainer {
     width: 100%;
     height: 300px;
+    margin-top: -300px;
+    margin-bottom: 0;
     border-top: 2px solid #0995d6;
     background: #000000;
     z-index: 5;
@@ -8,10 +10,12 @@
     font-family: 'Celtic Garamond the 2nd';
     color: #ffd82a;
     text-align: center;
+    float: left;
 }
 
 @media screen and (max-width: 999px) {/*and (min-width: 64){*/
     .footerContainer {
-        position: absolute;
+        margin-top: -300px;
+        float: left;
     }
 }

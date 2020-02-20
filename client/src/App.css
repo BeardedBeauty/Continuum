@@ -51,19 +51,10 @@ h2 {
   src: local("CELTG___"), url(./assets/Fonts/CELTG___.TTF) format('truetype');
 }
 
-.wrapper {
-  min-height: 100%;
-  margin-bottom: -300px;
-}
-
-.gallerytitle {
-  margin-left: 50%;
-}
-
 .bigG {
   margin-top: 120px;
-  margin-left: -69px;
   text-align: center;
+  width: 100%;
 }
 
 .img {
@@ -76,6 +67,16 @@ h2 {
   margin-top: -82px;
 }
 
+.aboutImageHideBorder {
+  width: 100%;
+  background-color: #131313;
+  border: 2px solid red;
+  float: left;
+  margin-bottom: -10px;
+  height: 50px;
+  z-index: 1;
+}
+
 .aboutimg {
   width: 100%;
   height: auto;
@@ -85,31 +86,48 @@ h2 {
     -o-filter     : blur(5px) !important;
     -ms-filter    : blur(5px) !important;
     filter        : blur(5px) !important;
-}
-
-.bio {
-  color: #131313;
-  position: absolute;
-  margin-top: -500px;
-  width: 500px;
-  margin-left: 20px;
-  z-index: 2;
+    opacity: .2;
 }
 
 .aboutCoverBio {
   position: absolute;
-  background: #1313139f;
+  background: #131313;
   width: 100%;
   height: auto;
-  z-index: 1;
+  z-index: 10;
   margin-top: 500px;
-
-  /* margin-top: 500px;
-  margin-bottom: -900px; */
 }
 
 .pusher {
-  height: 300px;
+  min-height: 100%;
+  margin-bottom: -300px;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: 0px;
+}
+
+.cssSadness {
+  position: absolute;
+  margin-top: 900px;
+  padding: 0;
+  float: left;
+  text-align: center;
+}
+
+.center {
+  margin-left: 50%;
+}
+
+.bio {
+  color: #e4e4e4;
+  z-index: 2;
+  line-height: 2;
+  width: 100%;
+  margin-bottom: -400px;
+  margin-left: -50%;
+  text-size-adjust: 15px;
 }
 
 @media screen and (max-width: 999px) {/*and (min-width: 64){*/
@@ -117,24 +135,29 @@ h2 {
     margin-top: -112px;
   }
 
-  .pusher {
-    height: 300px;
-  }
-
-  .wrapper {
-    min-height: 100%;
-    margin-bottom: -300px;
-  }
-
   .aboutimg {
     width: 1000px;
     height: auto;
     float: right;
-    margin-top: 50px;
+    opacity: .3;
     -webkit-filter: blur(5px) !important;
     -moz-filter   : blur(5px) !important;
     -o-filter     : blur(5px) !important;
     -ms-filter    : blur(5px) !important;
     filter        : blur(5px) !important;
+  }
+
+  .wrapper {
+    min-height: 100%;
+    /* margin-bottom: -300px; */
+  }
+
+  .pusher {
+    min-height: 100%;
+    margin-bottom: 0;
+  }
+
+  .cssSadness {
+    float: left;
   }
 }

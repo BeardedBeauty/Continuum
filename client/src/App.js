@@ -77,34 +77,40 @@ class App extends React.Component {
     render() {
         return (
             <>
-                <div className="wrapper">
-                    {/* <Logo /> */}
-                    <span className="test1" to="scrollto" onClick={() => this.scrollTo()} >
-                        <Scroll
-                            scrollDown={this.scrollButton}
-                            hide={this.state.scrollButtonVisible}>
-                        </Scroll>
-                    </span>
-                    <Title
-                        onscroll={this.scroll}
-                        stylesize={this.state.titlesize}
-                        h1C={this.state.capsC}
-                        h1U={this.state.capsU}
-                        cntuumHolder={this.state.holderContinuum}
-                        continuumPlacer={this.state.continuumPlacer}
-                        artsHolder={this.state.artsHolder}
-                        holder2placer={this.state.holder2placer} />
-                    <Element name="gallery" className="element elementmargin" />
-                    <div className="gallerytitle">
-                        <h2 className="bigG">{this.state.gallerytitle}</h2>
+                <div className="pusher">
+                    <div className="wrapper">
+                        {/* <Logo /> */}
+                        <span className="test1" to="scrollto" onClick={() => this.scrollTo()} >
+                            <Scroll
+                                scrollDown={this.scrollButton}
+                                hide={this.state.scrollButtonVisible}>
+                            </Scroll>
+                        </span>
+                        <Title
+                            onscroll={this.scroll}
+                            stylesize={this.state.titlesize}
+                            h1C={this.state.capsC}
+                            h1U={this.state.capsU}
+                            cntuumHolder={this.state.holderContinuum}
+                            continuumPlacer={this.state.continuumPlacer}
+                            artsHolder={this.state.artsHolder}
+                            holder2placer={this.state.holder2placer} />
+                        <Element name="gallery" className="element elementmargin" />
+                        <div className="gallerytitle">
+                            <h2 className="bigG">{this.state.gallerytitle}</h2>
+                        </div>
+                        <Gallery />
+                        <br />
+                        <div className="aboutImageHideBorder"></div>
+                        <div className="cssSadness">
+                            <div className="center" >
+                                <p className="bio">Marty has 40 years of experience in fine art, graphic design, commercial art, indoor and outdoor murals, illustration, sign painting, and sculpture.  In addition, she collaborates with her husband to create artistic leather work and designs. She earned an AA degree from the University of Minnesota specializing in art and design and has a broad and deep experience with an eclectic blend of visual art forms. This versatile artist loves to use her artistic skills to serve and support her community.</p>
+                            </div>
+                            <img className="aboutimg" src={about} alt="about" />
+                            <Footer />
+                        </div>
                     </div>
-                    <Gallery />
-                    <br />
-                    <img className="aboutimg" src={about} alt="about" />
-                    <p className="bio">Marty has 40 years of experience in fine art, graphic design, commercial art, indoor and outdoor murals, illustration, sign painting, and sculpture.  In addition, she collaborates with her husband to create artistic leather work and designs. She earned an AA degree from the University of Minnesota specializing in art and design and has a broad and deep experience with an eclectic blend of visual art forms. This versatile artist loves to use her artistic skills to serve and support her community.</p>
-                    <div className="pusher"></div>
                 </div>
-                <Footer />
             </>
         )
     };
