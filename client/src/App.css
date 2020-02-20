@@ -117,8 +117,7 @@ h2 {
 }
 
 .cssSadness {
-  position: absolute;
-  padding: 0;
+  padding: 0px;
   text-align: center;
   width: 100%;
   position: relative;
@@ -126,6 +125,7 @@ h2 {
 
 .center {
   margin-left: 50%;
+  vertical-align: bottom;
 }
 
 .bio {
@@ -133,8 +133,8 @@ h2 {
   z-index: 2;
   line-height: 2;
   width: 100%;
-  margin-bottom: -400px;
   margin-left: -50%;
+  vertical-align: bottom;
 }
 
 @media screen and (max-width: 999px) {/*and (min-width: 64){*/
@@ -147,11 +147,11 @@ h2 {
     height: auto;
     float: right;
     opacity: .2;
-    -webkit-filter: blur(5px) !important;
-    -moz-filter   : blur(5px) !important;
-    -o-filter     : blur(5px) !important;
-    -ms-filter    : blur(5px) !important;
-    filter        : blur(5px) !important;
+    -webkit-filter: blur(2px) !important;
+    -moz-filter   : blur(2px) !important;
+    -o-filter     : blur(2px) !important;
+    -ms-filter    : blur(2px) !important;
+    filter        : blur(2px) !important;
   }
 
   .wrapper {
@@ -172,5 +172,6 @@ h2 {
   .bio {
     width: 180%;
     margin-left: -90%;
+
   }
 }
