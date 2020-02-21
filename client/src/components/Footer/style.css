@@ -1,8 +1,7 @@
 .footerContainer {
     width: 100%;
     height: 300px;
-    margin-top: -300px;
-    margin-bottom: 0;
+    margin-top: 00px;
     border-top: 2px solid #0995d6;
     background: #000000;
     z-index: 5;
@@ -15,7 +14,7 @@
 
 @media screen and (max-width: 999px) {/*and (min-width: 64){*/
     .footerContainer {
-        margin-top: -300px;
+        /* margin-top: -300px; */
         float: left;
     }
 }

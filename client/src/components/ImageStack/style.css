@@ -11,6 +11,7 @@
     border-left: 2px solid #131313ea;
     border-right: 2px solid #131313ea;
     float: left;
+    z-index: 10;
 }
 
 .stackImage:hover {
