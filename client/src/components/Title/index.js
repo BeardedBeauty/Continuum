@@ -1,4 +1,10 @@
 import React from "react";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 import background from "../../assets/Images/horseII.png";
 import "./style.css";
 import "../../assets/Fonts/CELTG___.TTF";

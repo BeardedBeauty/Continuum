@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 import insta from "../../assets/Images/mail.png";
 import mail from "../../assets/Images/insta.png";
+import link from "../../assets/Images/linkdin.png";
 
 function Footer(props) {
     return (
@@ -15,6 +16,9 @@ function Footer(props) {
             <a href="https://www.instagram.com/martys_arts_continuum/">
                 <img src={mail} alt="mail" className="webconnect" />
             </a>
+            {/* <a href="https://www.instagram.com/martys_arts_continuum/">
+                <img src={link} alt="link" className="webconnect" />
+            </a> */}
             <h5>© John Ochs 2020</h5>
         </div>
     )

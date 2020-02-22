@@ -12,15 +12,15 @@
     position: fixed;
     z-index: 11;
     margin-left: -40px;
-    border: 2px solid goldenrod;
+    border: 2px solid #ffd82a;
     width: 80px;
     height: 80px;
     border-radius: 100%;
 }
 
 #button:hover {
-    border: 2px solid #ffd82a;
-    transition: .2s;
+    border: 2px solid #af36ff;
+    transition: .3s;
 }
 
 .scrollButton {
