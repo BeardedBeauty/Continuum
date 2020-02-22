@@ -18,21 +18,27 @@ function ImageStack() {
         <>
             <Link to="/fineart">
                 <img className="stackImage" src={fineart} />
+                <div className="desc"></div>
             </Link>
             <Link to="/leather">
                 <img className="stackImage" src={leather} />
+                <div className="desc"></div>
             </Link>
             <Link to="/murals">
                 <img className="stackImage" src={murals} />
+                <div className="desc"></div>
             </Link>
             <Link to="/signs">
                 <img className="stackImage" src={signs} />
+                <div className="desc"></div>
             </Link>
             <Link to="/illustrations">
                 <img className="stackImage" src={illust} />
+                <div className="desc"></div>
             </Link>
             <Link to="/misc">
                 <img className="stackImage" src={misc} />
+                <div className="desc"></div>
             </Link>
         </>
     )

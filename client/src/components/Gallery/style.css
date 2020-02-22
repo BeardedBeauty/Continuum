@@ -1,7 +1,7 @@
 .gallery {
     width: 100%;
     height: 800px;
-    margin-top: 180px;
+    margin-top: 80px;
     z-index: 2;
     text-align: center;
 }
@@ -15,9 +15,25 @@
     margin-left: -500px;
 }
 
+.gallerytitle {
+    margin-top: 79px;
+    background: black;
+    border-top: 2px solid #24c515;
+    border-bottom: 2px solid #24c515;
+    height: 80px;
+}
+
 @media screen and (max-width: 999px) {/*and (min-width: 64){*/
     .stacks {
         width: 500px;
         margin-left: -250px;
+    }
+
+    .gallerytitle {
+        margin-top: 109px;
+        background: black;
+        border-top: 2px solid #24c515;
+        border-bottom: 2px solid #24c515;
+        height: 80px;
     }
 }

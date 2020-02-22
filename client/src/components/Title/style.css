@@ -152,6 +152,7 @@ h2 {
 .centerwords {
     width: 1200px;
     margin-left: -600px;
+    align-content: center;
 }
 
 @media screen and (max-width: 999px) {/*and (min-width: 64){*/

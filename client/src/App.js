@@ -22,20 +22,14 @@ class App extends React.Component {
             artsHolder: "martysartsCenter",
             holder2placer: "holder2PlacerCenter",
             scrollButtonVisible: "scrollButton",
-            // gallerytitle: "G a l l e r i e s",
         }
     };
 
-    componentDidMount = () => {
-        window.addEventListener('scroll', this.scroll);
-    };
+    componentDidMount = () => window.addEventListener('scroll', this.scroll);
 
-    componentWillUnmount = () => {
-        window.removeEventListener('scroll', this.scroll);
-    };
+    componentWillUnmount = () => window.removeEventListener('scroll', this.scroll);
 
     scrollTo() {
-        console.log(0)
         scroller.scrollTo("gallery", {
             duration: 500,
             delay: 0,
@@ -43,9 +37,8 @@ class App extends React.Component {
         });
     };
 
-    scroll = event => {
+    scroll = u => {
         let scrolling = window.scrollY;
-        // console.log(scrolling);
         scrolling > 150 ? this.setState({
             titlesize: "scroll",
             titlemargin: "continuumMarginSmall",
@@ -70,9 +63,7 @@ class App extends React.Component {
             : this.setState({ scrollButtonVisible: "scrollButton" });
     };
 
-    scrollButton = (event) => {
-        event ? event.preventDefault() : console.log(event);
-    };
+    scrollButton = y => y ? y.preventDefault() : console.log(y);
 
     render() {
         return (
