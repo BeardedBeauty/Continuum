@@ -18,3 +18,9 @@
         float: left;
     }
 }
+
+.webconnect {
+    width: 50px;
+    height: auto;
+    margin: 10px;
+}
