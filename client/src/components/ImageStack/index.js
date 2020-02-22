@@ -5,10 +5,10 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import fineart from "../../assets/Images/fart.tiff";
-import leather from "../../assets/Images/lart.JPG";
+import fineart from "../../assets/Images/fineart.png";
+import leather from "../../assets/Images/leather.png";
 import misc from "../../assets/Images/misc.png";
-import murals from "../../assets/Images/mrls.png";
+import murals from "../../assets/Images/murals.png";
 import signs from "../../assets/Images/signs.png";
 import illust from "../../assets/Images/ills.png";
 import "./style.css";

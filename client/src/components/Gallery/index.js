@@ -21,7 +21,8 @@ class Gallery extends React.Component {
                 misc: [],
                 murals: [],
                 signs: []
-            }
+            },
+            title: "G a l l e r i e s"
         }
     };
 

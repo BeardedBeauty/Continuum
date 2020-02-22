@@ -22,7 +22,7 @@ class App extends React.Component {
             artsHolder: "martysartsCenter",
             holder2placer: "holder2PlacerCenter",
             scrollButtonVisible: "scrollButton",
-            gallerytitle: "G a l l e r y",
+            // gallerytitle: "G a l l e r i e s",
         }
     };
 
@@ -96,9 +96,6 @@ class App extends React.Component {
                             artsHolder={this.state.artsHolder}
                             holder2placer={this.state.holder2placer} />
                         <Element name="gallery" className="element elementmargin" />
-                        <div className="gallerytitle">
-                            <h2 className="bigG">{this.state.gallerytitle}</h2>
-                        </div>
                         <Gallery />
                         <br />
                         <div className="whatThe"></div>
