@@ -52,43 +52,62 @@ class Gallery extends React.Component {
         }).catch(err => console.log(err));
     };
 
+    title = props => this.setState({ title: props });
+
     render() {
         return (
-            <Router>
-                <Switch>
-                    <Route path="/" exact component={GalleryFolders} />
-                    <Route path="/fineart"
-                        render={props => <Fineart {...props}
-                            images={this.state.images.fineart}
-                        />}
-                    />
-                    <Route path="/leather"
-                        render={props => <Fineart {...props}
-                            images={this.state.images.leather}
-                        />}
-                    />
-                    <Route path="/illustrations"
-                        render={props => <Fineart {...props}
-                            images={this.state.images.illust}
-                        />}
-                    />
-                    <Route path="/murals"
-                        render={props => <Fineart {...props}
-                            images={this.state.images.murals}
-                        />}
-                    />
-                    <Route path="/signs"
-                        render={props => <Fineart {...props}
-                            images={this.state.images.signs}
-                        />}
-                    />
-                    <Route path="/misc"
-                        render={props => <Fineart {...props}
-                            images={this.state.images.misc}
-                        />}
-                    />
-                </Switch>
-            </Router>
+            <>
+                <div className="gallerytitle">
+                    <h2 className="bigG">{this.state.title}</h2>
+                </div>
+                <Router>
+                    <Switch>
+                        <Route path="/" exact component={GalleryFolders} />
+                        <Route path="/fineart"
+                            render={props => <Fineart {...props}
+                                images={this.state.images.fineart}
+                                title={this.title}
+                                medium={"F i n e   A r t"}
+                            />}
+                        />
+                        <Route path="/leather"
+                            render={props => <Fineart {...props}
+                                images={this.state.images.leather}
+                                title={this.title}
+                                medium={"L e a t h e r"}
+                            />}
+                        />
+                        <Route path="/illustrations"
+                            render={props => <Fineart {...props}
+                                images={this.state.images.illust}
+                                title={this.title}
+                                medium={"I l l u s t r a t i o n s"}
+                            />}
+                        />
+                        <Route path="/murals"
+                            render={props => <Fineart {...props}
+                                images={this.state.images.murals}
+                                title={this.title}
+                                medium={"M u r a l s"}
+                            />}
+                        />
+                        <Route path="/signs"
+                            render={props => <Fineart {...props}
+                                images={this.state.images.signs}
+                                title={this.title}
+                                medium={"S i g n s"}
+                            />}
+                        />
+                        <Route path="/misc"
+                            render={props => <Fineart {...props}
+                                images={this.state.images.misc}
+                                title={this.title}
+                                medium={"M i s c e l l a n e o u s"}
+                            />}
+                        />
+                    </Switch>
+                </Router>
+            </>
         )
     }
 };
