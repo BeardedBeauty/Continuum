@@ -22,7 +22,8 @@ class Gallery extends React.Component {
                 murals: [],
                 signs: []
             },
-            title: "G a l l e r i e s"
+            title: "G a l l e r i e s",
+            modal: "displayNone"
         }
     };
 
@@ -54,6 +55,8 @@ class Gallery extends React.Component {
 
     title = props => this.setState({ title: props });
 
+    displayModal = display => display ? this.setState({ modal: "displayBlock" }) : this.setState({ modal: "displayNone" });
+
     render() {
         return (
             <>
@@ -68,6 +71,7 @@ class Gallery extends React.Component {
                                 images={this.state.images.fineart}
                                 title={this.title}
                                 medium={"F i n e   A r t"}
+                                generate={this.displayModal}
                             />}
                         />
                         <Route path="/leather"
