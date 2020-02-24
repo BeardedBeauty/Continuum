@@ -75,7 +75,9 @@ class Gallery extends React.Component {
                 </div>
                 <Router>
                     <Switch>
-                        <Route path="/" exact component={GalleryFolders} />
+                        <Route path="/" render={props => <GalleryFolders {...props}
+                            medium={"G a l l e r i e s"} />}
+                        />
                         <Route path="/fineart"
                             render={props => <Fineart {...props}
                                 images={this.state.images.fineart}
@@ -130,7 +132,6 @@ class Gallery extends React.Component {
                     modalDisplay={this.state.modal}
                     image={this.state.modalImage}
                     generate={this.displayModal}
-                // close={this.modalClose}
                 />
             </>
         )

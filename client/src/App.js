@@ -2,11 +2,9 @@ import React from 'react';
 import { DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from "react-scroll";
 import "./assets/Fonts/CELTG___.TTF";
 import './App.css';
-import about from "./assets/Images/about.JPG"
 import Title from "./components/Title";
 import Scroll from "./components/Scroll";
 import Gallery from './components/Gallery';
-import Modal from "./components/Modal";
 import Footer from './components/Footer/Index';
 
 class App extends React.Component {
@@ -68,10 +66,6 @@ class App extends React.Component {
 
     scrollButton = y => y ? y.preventDefault() : console.log(y);
 
-    modalPop = () => { this.setState({ modal: "displayBlock" }); console.log("yuh") }
-
-    modalClose = () => this.setState({ modal: "displayNone" });
-
     render() {
         return (
             <>
@@ -103,11 +97,6 @@ class App extends React.Component {
                                 <div className="bio">Marty has 40 years of experience in fine art, graphic design, commercial art, indoor and outdoor murals, illustration, sign painting, and sculpture.  In addition, she collaborates with her husband to create artistic leather work and designs. She earned an AA degree from the University of Minnesota specializing in art and design and has a broad and deep experience with an eclectic blend of visual art forms. This versatile artist loves to use her artistic skills to serve and support her community.</div>
                             </div>
                         </div> */}
-                        <Modal
-                            modalDisplay={this.state.modal}
-                            image={this.state.image}
-                            generate={this.modalPop}
-                            close={this.modalClose} />
                     </div>
                 </div>
                 <Footer />
