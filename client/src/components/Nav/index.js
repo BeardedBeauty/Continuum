@@ -1,5 +1,5 @@
 import React from "react";
-// import "./style.css";
+import "./style.css";
 import insta from "../../assets/Images/mail.png";
 import mail from "../../assets/Images/insta.png";
 import link from "../../assets/Images/linkdin.png";
@@ -13,7 +13,7 @@ import {
 function Nav(props) {
     return (
         <div className="gallerytitle">
-            {props.home && <Link to="/">G A L L E R I E S</Link>}
+            {props.home && <Link to="/">g a l l e r i e s</Link>}
             <a href="mailto:marty_ochs@yahoo.com">
                 <img src={insta} alt="insta" className="webconnect" />
             </a>

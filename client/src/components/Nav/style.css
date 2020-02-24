@@ -4,5 +4,17 @@
     border-top: 2px solid #24c515;
     border-bottom: 2px solid #24c515;
     height: 80px;
+    text-align: center;
+}
+
+a {
     font-family: 'Celtic Garamond the 2nd';
+    color: #ffd82a;
+    text-decoration: none;
+    transition: .5s;
+    margin-top: -100px;
+}
+
+a:hover {
+    color: #24c515;
 }
