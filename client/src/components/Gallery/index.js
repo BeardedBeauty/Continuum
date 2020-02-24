@@ -9,6 +9,7 @@ import {
 import api from "../../utils/API";
 import GalleryFolders from "../GalleryFolders";
 import Fineart from "./../../pages/Fineart.js";
+import Modal from "../Modal";
 
 class Gallery extends React.Component {
     constructor(props) {
@@ -23,7 +24,8 @@ class Gallery extends React.Component {
                 signs: []
             },
             title: "G a l l e r i e s",
-            modal: "displayNone"
+            modal: "displayNone",
+            modalImage: ""
         }
     };
 
@@ -53,9 +55,17 @@ class Gallery extends React.Component {
         }).catch(err => console.log(err));
     };
 
-    title = props => this.setState({ title: props });
+    title = o => this.setState({ title: o });
 
-    displayModal = display => display ? this.setState({ modal: "displayBlock" }) : this.setState({ modal: "displayNone" });
+    displayModal = display => {
+        display ? this.setState({
+            modal: "displayBlock",
+            modalImage: display
+        }) : this.setState({
+            modal: "displayNone",
+            modalImage: null
+        });
+    }
 
     render() {
         return (
@@ -111,6 +121,12 @@ class Gallery extends React.Component {
                         />
                     </Switch>
                 </Router>
+                <Modal
+                    modalDisplay={this.state.modal}
+                    image={this.state.modalImage}
+                    generate={this.displayModal}
+                // close={this.modalClose}
+                />
             </>
         )
     }

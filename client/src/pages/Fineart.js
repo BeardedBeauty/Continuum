@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import Image from "../components/Image.js";
-// import "./style.css";
 
 function ArtPage(props) {
     useEffect(() => {
@@ -8,7 +6,7 @@ function ArtPage(props) {
     }, []);
     let imgs = [];
     for (let r = 0; r < props.images.length; r++) {
-        imgs.push(<Image key={r} link={props.images[r]} generate={u => props.generate(u)} />);
+        imgs.push(<img key={r} src={props.images[r]} alt="galleryimage" className="img" onClick={() => props.generate(props.images[r])} />);
     }
     return (
         <>{imgs}</>
