@@ -89,6 +89,7 @@ class Gallery extends React.Component {
                                 images={this.state.images.leather}
                                 title={this.title}
                                 medium={"L e a t h e r"}
+                                generate={this.displayModal}
                             />}
                         />
                         <Route path="/illustrations"
@@ -96,6 +97,7 @@ class Gallery extends React.Component {
                                 images={this.state.images.illust}
                                 title={this.title}
                                 medium={"I l l u s t r a t i o n s"}
+                                generate={this.displayModal}
                             />}
                         />
                         <Route path="/murals"
@@ -103,6 +105,7 @@ class Gallery extends React.Component {
                                 images={this.state.images.murals}
                                 title={this.title}
                                 medium={"M u r a l s"}
+                                generate={this.displayModal}
                             />}
                         />
                         <Route path="/signs"
@@ -110,6 +113,7 @@ class Gallery extends React.Component {
                                 images={this.state.images.signs}
                                 title={this.title}
                                 medium={"S i g n s"}
+                                generate={this.displayModal}
                             />}
                         />
                         <Route path="/misc"
@@ -117,6 +121,7 @@ class Gallery extends React.Component {
                                 images={this.state.images.misc}
                                 title={this.title}
                                 medium={"M i s c e l l a n e o u s"}
+                                generate={this.displayModal}
                             />}
                         />
                     </Switch>
