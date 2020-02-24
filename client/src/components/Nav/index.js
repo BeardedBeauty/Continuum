@@ -13,7 +13,7 @@ import {
 function Nav(props) {
     return (
         <div className="gallerytitle">
-            {props.home && <Link href="/">G A L L E R I E S</Link>}
+            {props.home && <Link to="/">G A L L E R I E S</Link>}
             <a href="mailto:marty_ochs@yahoo.com">
                 <img src={insta} alt="insta" className="webconnect" />
             </a>

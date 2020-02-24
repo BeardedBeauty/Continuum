@@ -72,8 +72,8 @@ class Gallery extends React.Component {
         return (
             <>
                 <Router>
+                    <Nav home={true} />
                     <Switch>
-                        <Nav />
                         <Route path="/" exact component={GalleryFolders} />
                         <Route path="/fineart"
                             render={props => <Fineart {...props}
