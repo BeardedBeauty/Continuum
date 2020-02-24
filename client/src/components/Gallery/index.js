@@ -10,6 +10,7 @@ import api from "../../utils/API";
 import GalleryFolders from "../GalleryFolders";
 import Fineart from "./../../pages/Fineart.js";
 import Modal from "../Modal";
+import Nav from "../Nav";
 
 class Gallery extends React.Component {
     constructor(props) {
@@ -70,14 +71,10 @@ class Gallery extends React.Component {
     render() {
         return (
             <>
-                <div className="gallerytitle">
-                    <h2 className="bigG">{this.state.title}</h2>
-                </div>
                 <Router>
                     <Switch>
-                        <Route path="/" render={props => <GalleryFolders {...props}
-                            medium={"G a l l e r i e s"} />}
-                        />
+                        <Nav />
+                        <Route path="/" exact component={GalleryFolders} />
                         <Route path="/fineart"
                             render={props => <Fineart {...props}
                                 images={this.state.images.fineart}

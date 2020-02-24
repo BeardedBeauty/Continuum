@@ -1,15 +1,19 @@
 import React from "react";
-import "./style.css";
+// import "./style.css";
 import insta from "../../assets/Images/mail.png";
 import mail from "../../assets/Images/insta.png";
 import link from "../../assets/Images/linkdin.png";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
-function Footer() {
+function Nav(props) {
     return (
-        <div className="footerContainer">
-            <br />
-            <h4 className="h4footer">M A R T Y 'S • A R T S • C O N T I N U U M</h4>
-            <h4>Based in Eden Prairie, Minnesota</h4>
+        <div className="gallerytitle">
+            {props.home && <Link href="/">G A L L E R I E S</Link>}
             <a href="mailto:marty_ochs@yahoo.com">
                 <img src={insta} alt="insta" className="webconnect" />
             </a>
@@ -17,11 +21,10 @@ function Footer() {
                 <img src={mail} alt="mail" className="webconnect" />
             </a>
             {/* <a href="https://www.instagram.com/martys_arts_continuum/">
-                <img src={link} alt="link" className="webconnect" />
-            </a> */}
-            <h6>© John Ochs 2020</h6>
+            <img src={link} alt="link" className="webconnect" />
+        </a> */}
         </div>
     )
 };
 
-export default Footer;
+export default Nav;
