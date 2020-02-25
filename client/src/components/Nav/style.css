@@ -4,17 +4,50 @@
     border-top: 2px solid #24c515;
     border-bottom: 2px solid #24c515;
     height: 80px;
-    text-align: center;
 }
 
-a {
+.navLink {
     font-family: 'Celtic Garamond the 2nd';
-    color: #ffd82a;
+    color: goldenrod;
+    font-size: x-large;
     text-decoration: none;
-    transition: .5s;
-    margin-top: -100px;
+    transition: .3s;
+    margin-right: 40px;
 }
 
-a:hover {
-    color: #24c515;
+.navLink:hover {
+    color: #ffd82a;
+}
+
+.navLinkContainer {
+    margin-top: 28px;
+    margin-left: -190px;
+    float: left;
+}
+
+.iconContainer {
+    height: 100%;
+    float: right;
+    /* margin-top: -22px; */
+}
+
+.webconnect2 {
+    width: 60px;
+    height: auto;
+    margin: 10px;
+}
+
+
+@media screen and (max-width: 999px) {/*and (min-width: 64){*/
+    .gallerytitle {
+        margin-top: 109px;
+    }
+
+    .navLink {
+        font-size: large;
+    }
+
+    .navLinkContainer {
+        margin-left: -148px;
+    }
 }
