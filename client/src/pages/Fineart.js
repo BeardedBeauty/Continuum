@@ -9,7 +9,7 @@ function ArtPage(props) {
         imgs.push(<img key={r} src={props.images[r]} alt="galleryimage" className="img" onClick={() => props.generate(props.images[r])} />);
     }
     return (
-        <>{imgs}</>
+        <div className="imageContainer">{imgs}</div>
     )
 };
 

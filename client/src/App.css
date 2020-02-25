@@ -57,10 +57,10 @@ h2 {
 }
 
 .img {
-  height: 300px;
-  width: auto;
-  margin: 50px;
-  float: left;
+  max-height: 250px;
+  max-width: 300px;
+  margin: 30px;
+  /* float: right; */
 }
 
 .elementmargin {
@@ -107,6 +107,10 @@ h2 {
   min-height: 100%;
   margin-bottom: 0px;
 }
+
+/* .imageContianer {
+  ;
+} */
 
 .cssSadness {
   padding: 0px;

@@ -1,14 +1,14 @@
 .gallerytitle {
     margin-top: 79px;
     background: black;
-    border-top: 2px solid #24c515;
-    border-bottom: 2px solid #24c515;
+    border-top: 2px solid goldenrod;
+    border-bottom: 2px solid goldenrod;
     height: 80px;
 }
 
 .navLink {
     font-family: 'Celtic Garamond the 2nd';
-    color: goldenrod;
+    color: #ffd82a;
     /* font-size: x-large; */
     text-decoration: none;
     transition: .3s;
@@ -16,7 +16,7 @@
 }
 
 .navLink:hover {
-    color: #ffd82a;
+    color: #0995d6;
 }
 
 .navLinkContainer {
@@ -41,6 +41,10 @@
 @media screen and (max-width: 999px) {/*and (min-width: 64){*/
     .gallerytitle {
         margin-top: 109px;
+    }
+
+    .navLink {
+        font-size: large;
     }
 
     .navLinkContainer {

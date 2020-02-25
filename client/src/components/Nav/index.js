@@ -16,9 +16,9 @@ function Nav(props) {
             <div className="gallerytitle">
                 <div className="center">
                     <div className="navLinkContainer">
+                        {props.home && <Link to="/" className="navLink">G A L L E R I E S</Link>}
                         <a href="mailto:marty_ochs@yahoo.com" className="navLink">C O N T A C T</a>
                         <Link to="/" className="navLink">A B O U T</Link>
-                        {props.home && <Link to="/" className="navLink">G A L L E R I E S</Link>}
                     </div>
                 </div>
             </div>
