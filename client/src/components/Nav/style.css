@@ -9,7 +9,7 @@
 .navLink {
     font-family: 'Celtic Garamond the 2nd';
     color: goldenrod;
-    font-size: x-large;
+    /* font-size: x-large; */
     text-decoration: none;
     transition: .3s;
     margin-right: 40px;
@@ -20,8 +20,8 @@
 }
 
 .navLinkContainer {
-    margin-top: 28px;
-    margin-left: -190px;
+    margin-top: 30px;
+    margin-left: -255px;
     float: left;
 }
 
@@ -41,10 +41,6 @@
 @media screen and (max-width: 999px) {/*and (min-width: 64){*/
     .gallerytitle {
         margin-top: 109px;
-    }
-
-    .navLink {
-        font-size: large;
     }
 
     .navLinkContainer {

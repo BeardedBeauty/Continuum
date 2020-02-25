@@ -59,7 +59,7 @@ h2 {
 .img {
   height: 300px;
   width: auto;
-  margin-top: 100px;
+  margin: 50px;
   float: left;
 }
 
@@ -82,6 +82,8 @@ h2 {
   height: auto;
   z-index: 0;
   opacity: .1;
+  float: left;
+  margin-top: -400px;
 }
 
 .whatThe {
@@ -91,17 +93,14 @@ h2 {
 }
 
 .aboutCoverBio {
-  position: absolute;
-  background: #131313;
   width: 100%;
-  height: auto;
-  z-index: 10;
-  margin-top: 500px;
+  height: 1px;
 }
 
 .pusher {
   min-height: 100%;
-  margin-bottom: -300px;
+  overflow: auto;
+  /* margin-bottom: -300px; */
 }
 
 .wrapper {
@@ -113,7 +112,9 @@ h2 {
   padding: 0px;
   text-align: center;
   width: 100%;
+  height: 500px;
   z-index: 1;
+  margin-top: 300px;
 }
 
 .center {
@@ -126,8 +127,7 @@ h2 {
   line-height: 2;
   width: 100%;
   margin-left: -50%;
-  margin-top: -700px;
-  vertical-align: top;
+  vertical-align: baseline;
 }
 
 @media screen and (max-width: 999px) {/*and (min-width: 64){*/
