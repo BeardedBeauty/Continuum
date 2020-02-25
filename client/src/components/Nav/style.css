@@ -27,8 +27,8 @@
 
 .iconContainer {
     height: 100%;
-    float: right;
-    /* margin-top: -22px; */
+    margin-left: 190px;
+    margin-top: -82px;
 }
 
 .webconnect2 {
@@ -49,5 +49,13 @@
 
     .navLinkContainer {
         margin-left: -148px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .iconContainer {
+        margin-left: -80px;
+        margin-right: auto;
+        margin-top: 0;
     }
 }
