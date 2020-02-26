@@ -26,7 +26,8 @@ class Gallery extends React.Component {
             },
             title: "G a l l e r i e s",
             modal: "displayNone",
-            modalImage: ""
+            modalImage: "",
+            scroll: props.scroll
         }
     };
 
@@ -72,7 +73,7 @@ class Gallery extends React.Component {
         return (
             <>
                 <Router>
-                    <Nav home={true} />
+                    <Nav home={true} scroll={this.state.scroll} />
                     <Switch>
                         <Route path="/" exact component={GalleryFolders} />
                         <Route path="/fineart"

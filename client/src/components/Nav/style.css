@@ -14,13 +14,9 @@
     transition: .3s;
 }
 
-#marginLinkLeft {
-    /* margin-right: 20px; */
-}
+#aboutClick {cursor: pointer;}
 
-.navLink:hover {
-    color: #0995d6;
-}
+.navLink:hover {color: #0995d6;}
 
 .navLinkContainer {
     margin-top: 30px;

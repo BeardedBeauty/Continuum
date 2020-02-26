@@ -31,8 +31,16 @@ class App extends React.Component {
 
     componentWillUnmount = () => window.removeEventListener('scroll', this.scroll);
 
-    scrollTo() {
+    scrollToGallery() {
         scroller.scrollTo("gallery", {
+            duration: 500,
+            delay: 0,
+            smooth: 'easeInOutQuart'
+        });
+    };
+
+    scrollToAbout() {
+        scroller.scrollTo("about", {
             duration: 500,
             delay: 0,
             smooth: 'easeInOutQuart'
@@ -61,8 +69,7 @@ class App extends React.Component {
             holder2placer: "holder2PlacerCenter"
         });
 
-        scrolling > 500 ? this.setState({ scrollButtonVisible: "hide" })
-            : this.setState({ scrollButtonVisible: "scrollButton" });
+        scrolling > 500 ? this.setState({ scrollButtonVisible: "hide" }) : this.setState({ scrollButtonVisible: "scrollButton" });
     };
 
     scrollButton = y => y ? y.preventDefault() : console.log(y);
@@ -72,8 +79,7 @@ class App extends React.Component {
             <>
                 <div className="pusher">
                     <div className="wrapper">
-                        {/* <Logo /> */}
-                        <span className="test1" to="scrollto" onClick={() => this.scrollTo()} >
+                        <span className="test1" to="scrollto" onClick={() => this.scrollToGallery()} >
                             <Scroll
                                 scrollDown={this.scrollButton}
                                 hide={this.state.scrollButtonVisible}>
@@ -89,10 +95,11 @@ class App extends React.Component {
                             artsHolder={this.state.artsHolder}
                             holder2placer={this.state.holder2placer} />
                         <Element name="gallery" className="element elementmargin" />
-                        <Gallery />
+                        <Gallery scroll={this.scrollToAbout} />
                         <br />
                     </div>
                 </div>
+                <Element name="about" className="element" />
                 <About />
                 <Footer />
             </>

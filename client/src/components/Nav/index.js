@@ -23,7 +23,7 @@ function Nav(props) {
                             <a href="mailto:marty_ochs@yahoo.com" className="navLink">C O N T A C T</a>
                         </div>
                         <div className="linkBox">
-                            <Link to="/" className="navLink">A B O U T</Link>
+                            <span id="aboutClick" onClick={() => props.scroll()} className="navLink">A B O U T</span>
                         </div>
                     </div>
                 </div>
