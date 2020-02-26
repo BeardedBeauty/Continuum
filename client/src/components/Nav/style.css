@@ -12,7 +12,6 @@
     /* font-size: x-large; */
     text-decoration: none;
     transition: .3s;
-    margin-right: 40px;
 }
 
 .navLink:hover {
@@ -23,6 +22,7 @@
     margin-top: 30px;
     margin-left: -255px;
     float: left;
+    text-align: center;
 }
 
 .iconContainer {
@@ -37,6 +37,11 @@
     margin: 10px;
 }
 
+.linkBox {
+    width: 200px;
+    float: left;
+    margin-right: 40px;
+}
 
 @media screen and (max-width: 999px) {/*and (min-width: 64){*/
     .gallerytitle {
@@ -48,7 +53,7 @@
     }
 
     .navLinkContainer {
-        margin-left: -148px;
+        margin-left: -225px;
     }
 }
 
