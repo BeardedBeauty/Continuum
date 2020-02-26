@@ -68,7 +68,6 @@ class App extends React.Component {
             artsHolder: "martysartsCenter",
             holder2placer: "holder2PlacerCenter"
         });
-
         scrolling > 500 ? this.setState({ scrollButtonVisible: "hide" }) : this.setState({ scrollButtonVisible: "scrollButton" });
     };
 
