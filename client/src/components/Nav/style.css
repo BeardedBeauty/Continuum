@@ -14,13 +14,17 @@
     transition: .3s;
 }
 
+#marginLinkLeft {
+    /* margin-right: 20px; */
+}
+
 .navLink:hover {
     color: #0995d6;
 }
 
 .navLinkContainer {
     margin-top: 30px;
-    margin-left: -255px;
+    margin-left: -450px;
     float: left;
     text-align: center;
 }
@@ -38,14 +42,14 @@
 }
 
 .linkBox {
-    width: 200px;
+    width: 300px;
     float: left;
-    margin-right: 40px;
 }
 
-@media screen and (max-width: 999px) {/*and (min-width: 64){*/
+@media screen and (max-width: 999px) {
     .gallerytitle {
         margin-top: 109px;
+        height: 140px;
     }
 
     .navLink {
@@ -53,7 +57,15 @@
     }
 
     .navLinkContainer {
-        margin-left: -225px;
+        width: 300px;
+        margin-top: 5px;
+        margin-left: -150px;
+    }
+
+    .linkBox {
+        width: 300px;
+        float: left;
+        margin-top: 15px;
     }
 }
 
