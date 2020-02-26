@@ -13,15 +13,15 @@
 
 }
 
-@media screen and (max-width: 999px) {/*and (min-width: 64){*/
-    .footerContainer {
-        margin-top: -100px;
-        float: left;
-    }
-}
-
 .webconnect {
     width: 50px;
     height: auto;
     margin: 10px;
+}
+
+@media screen and (max-width: 999px) {/*and (min-width: 64){*/
+    .footerContainer {
+        margin-top: -50px;
+        float: left;
+    }
 }
