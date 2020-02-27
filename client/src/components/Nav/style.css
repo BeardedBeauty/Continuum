@@ -14,6 +14,15 @@
     transition: .3s;
 }
 
+.antinavLink {
+    font-family: 'Celtic Garamond the 2nd';
+    color: #525252;
+    /* font-size: x-large; */
+    text-decoration: none;
+    transition: .3s;
+    margin-top: 0px;
+}
+
 #aboutClick {cursor: pointer;}
 
 .navLink:hover {color: #0995d6;}

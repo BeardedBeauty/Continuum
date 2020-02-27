@@ -17,7 +17,10 @@ function Nav(props) {
                 <div className="center">
                     <div className="navLinkContainer">
                         {props.home && <div className="linkBox">
-                            <Link to="/" className="navLink" >G A L L E R I E S</Link>
+                            <Link to="/" className="navLink">G A L L E R I E S</Link>
+                        </div>}
+                        {!props.home && <div className="linkBox">
+                            <p className="antinavLink" >G A L L E R I E S</p>
                         </div>}
                         <div className="linkBox">
                             <a href="mailto:marty_ochs@yahoo.com" className="navLink">C O N T A C T</a>

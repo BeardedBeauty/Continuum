@@ -27,7 +27,8 @@ class Gallery extends React.Component {
             title: "G a l l e r i e s",
             modal: "displayNone",
             modalImage: "",
-            scroll: props.scroll
+            scroll: props.scroll,
+            galleryLink: false
         }
     };
 
@@ -69,11 +70,18 @@ class Gallery extends React.Component {
         });
     }
 
+    disable = s => {
+        console.log(s);
+        s ? this.setState({ galleryLink: s }) : this.setState({ galleryLink: s });
+    }
     render() {
         return (
             <>
                 <Router>
-                    <Nav home={true} scroll={this.state.scroll} />
+                    <Nav
+                        home={this.state.galleryLink}
+                        scroll={this.state.scroll}
+                    />
                     <Switch>
                         <Route path="/" exact component={GalleryFolders} />
                         <Route path="/fineart"
@@ -82,6 +90,7 @@ class Gallery extends React.Component {
                                 title={this.title}
                                 medium={"F i n e   A r t"}
                                 generate={this.displayModal}
+                                disable={this.disable}
                             />}
                         />
                         <Route path="/leather"

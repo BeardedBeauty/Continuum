@@ -16,30 +16,42 @@ import "./style.css";
 function ImageStack() {
     return (
         <>
-            <Link to="/fineart">
-                <img className="stackImage" src={fineart} />
-                <div className="desc"></div>
-            </Link>
-            <Link to="/leather">
-                <img className="stackImage" src={leather} />
-                <div className="desc"></div>
-            </Link>
-            <Link to="/murals">
-                <img className="stackImage" src={murals} />
-                <div className="desc"></div>
-            </Link>
-            <Link to="/signs">
-                <img className="stackImage" src={signs} />
-                <div className="desc"></div>
-            </Link>
-            <Link to="/illustrations">
-                <img className="stackImage" src={illust} />
-                <div className="desc"></div>
-            </Link>
-            <Link to="/misc">
-                <img className="stackImage" src={misc} />
-                <div className="desc"></div>
-            </Link>
+            <div className="textCenter">
+                <Link to="/fineart">
+                    <img className="stackImage" src={fineart} />
+                </Link>
+                <p className="desc">Fine Art</p>
+            </div>
+            <div className="textCenter">
+                <Link to="/leather">
+                    <img className="stackImage" src={leather} />
+                </Link>
+                <p className="desc">Leather</p>
+            </div>
+            <div className="textCenter">
+                <Link to="/murals">
+                    <img className="stackImage" src={murals} />
+                </Link>
+                <p className="desc">Murals</p>
+            </div>
+            <div className="textCenter">
+                <Link to="/signs">
+                    <img className="stackImage" src={signs} />
+                </Link>
+                <p className="desc">Signs</p>
+            </div>
+            <div className="textCenter">
+                <Link to="/illustrations">
+                    <img className="stackImage" src={illust} />
+                </Link>
+                <p className="desc">Illustrations</p>
+            </div>
+            <div className="textCenter">
+                <Link to="/misc">
+                    <img className="stackImage" src={misc} />
+                </Link>
+                <p className="desc">Miscellaneous</p>
+            </div>
         </>
     )
 };
