@@ -87,8 +87,7 @@ class Gallery extends React.Component {
                         <Route path="/fineart"
                             render={props => <Fineart {...props}
                                 images={this.state.images.fineart}
-                                title={this.title}
-                                medium={"F i n e   A r t"}
+                                title={"F i n e   A r t"}
                                 generate={this.displayModal}
                                 disable={this.disable}
                             />}
@@ -96,40 +95,35 @@ class Gallery extends React.Component {
                         <Route path="/leather"
                             render={props => <Fineart {...props}
                                 images={this.state.images.leather}
-                                title={this.title}
-                                medium={"L e a t h e r"}
+                                title={"L e a t h e r"}
                                 generate={this.displayModal}
                             />}
                         />
                         <Route path="/illustrations"
                             render={props => <Fineart {...props}
                                 images={this.state.images.illust}
-                                title={this.title}
-                                medium={"I l l u s t r a t i o n s"}
+                                title={"I l l u s t r a t i o n s"}
                                 generate={this.displayModal}
                             />}
                         />
                         <Route path="/murals"
                             render={props => <Fineart {...props}
                                 images={this.state.images.murals}
-                                title={this.title}
-                                medium={"M u r a l s"}
+                                title={"M u r a l s"}
                                 generate={this.displayModal}
                             />}
                         />
                         <Route path="/signs"
                             render={props => <Fineart {...props}
                                 images={this.state.images.signs}
-                                title={this.title}
-                                medium={"S i g n s"}
+                                title={"S i g n s"}
                                 generate={this.displayModal}
                             />}
                         />
                         <Route path="/misc"
                             render={props => <Fineart {...props}
                                 images={this.state.images.misc}
-                                title={this.title}
-                                medium={"M i s c e l l a n e o u s"}
+                                title={"M i s c e l l a n e o u s"}
                                 generate={this.displayModal}
                             />}
                         />

@@ -98,8 +98,9 @@ class App extends React.Component {
                         <br />
                     </div>
                 </div>
-                <Element name="about" className="element" />
-                <About />
+                <About>
+                    <Element name="about" className="element" />
+                </About>
                 <Footer />
             </>
         )

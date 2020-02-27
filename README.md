@@ -12,12 +12,13 @@ The artist has requested a login system for purchasing art for the future. This 
 The solution to upload artworks to the site without a login/admin function in the interim turned out to be a seperate web app.
 
 ### Image Manager (Admin/Artist side)
-This app comes with basic functionality that allows out artist to choose a catagory, write a title and description, and upload an image to the cloud server, [Firebase](https://firebase.google.com). The app also pulls in images previously uploaded to relieve confusion with not currently uploaded works. Firebase then kicks back a direct link to the image, which the app takes along with the description, title, medium, and runs a POST route to [MongoDB](https://www.mongodb.com/what-is-mongodb).
+This app comes with basic functionality that allows our artist to choose a catagory, write a title and description, and upload an image to the cloud server, [Firebase](https://firebase.google.com). The app also pulls in images previously uploaded to relieve confusion with not currently uploaded works. Firebase then kicks back a direct link to the image, which the app takes along with the description, title, medium, and runs a POST route to [MongoDB](https://www.mongodb.com/what-is-mongodb).
 This app takes full advantage of React on the front end.
 
 ### Continuum (Client/User side)
 Main site for users to view and request art commissions. The entire site is mostly built on a single page, with the only exception being the different galleries for art mediums. This app takes full advantage of React on the front end, only using basic CSS for styling.
-Nav links
+
+Nav links:
 * Galleries: Within a gallery, will bring you to the page displaying all galleries.
 * About: Auto-scrolls to the bottom, where a short bio is written about the artist.
 * Contact: Currently only opens an email link. This will be changed to a dropdown with other options.

@@ -16,6 +16,9 @@ import "./style.css";
 function ImageStack() {
     return (
         <>
+            <div className="titleGallery">
+                <p className="titleText">G a l l e r i e s</p>
+            </div>
             <div className="textCenter">
                 <Link to="/fineart">
                     <img className="stackImage" src={fineart} />
