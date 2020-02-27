@@ -28,7 +28,7 @@ class Gallery extends React.Component {
             modal: "displayNone",
             modalImage: "",
             scroll: props.scroll,
-            galleryLink: false
+            galleryLink: true
         }
     };
 
