@@ -8,7 +8,7 @@ function Footer() {
     return (
         <div className="footerContainer">
             <br />
-            <h4 className="h4footer">M A R T Y 'S • A R T S • C O N T I N U U M</h4>
+            <p id="h4footer">M A R T Y 'S • A R T S • C O N T I N U U M</p>
             <h4>Based in Eden Prairie, Minnesota</h4>
             <a href="mailto:marty_ochs@yahoo.com">
                 <img src={insta} alt="insta" className="webconnect" />

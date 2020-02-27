@@ -140,7 +140,6 @@ h2 {
 .titleimg {
     width: 100%;
     height: auto;
-    /* position: fixed; */
     z-index: 0;
     margin-top: -200px;
 }
