@@ -70,10 +70,8 @@ class Gallery extends React.Component {
         });
     }
 
-    disable = s => {
-        console.log(s);
-        s ? this.setState({ galleryLink: s }) : this.setState({ galleryLink: s });
-    }
+    // disable = s => s ? this.setState({ galleryLink: s }) : this.setState({ galleryLink: s });
+
     render() {
         return (
             <>

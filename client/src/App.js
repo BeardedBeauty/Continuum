@@ -94,7 +94,10 @@ class App extends React.Component {
                             artsHolder={this.state.artsHolder}
                             holder2placer={this.state.holder2placer} />
                         <Element name="gallery" className="element elementmargin" />
-                        <Gallery scroll={this.scrollToAbout} />
+                        <Gallery
+                            scroll={this.scrollToAbout}
+                            toTop={this.scrollToGallery}
+                        />
                         <br />
                     </div>
                 </div>
