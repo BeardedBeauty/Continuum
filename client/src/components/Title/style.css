@@ -18,7 +18,7 @@ h2 {
     transition: .5s;
 }
 .continuumright {
-    margin-left: 55%;
+    margin-left: 56%;
     transition: .5s;
 }
 
@@ -82,7 +82,7 @@ h2 {
 }
 
 .martysartsHalf {
-    margin-left: 15%;
+    margin-left: 16%;
     transition: .3s;
 }
 
@@ -151,7 +151,7 @@ h2 {
 .centerwords {
     width: 1200px;
     margin-left: -600px;
-    align-content: center;
+    text-align: center;
 }
 
 @media screen and (max-width: 999px) {/*and (min-width: 64){*/
