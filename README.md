@@ -15,8 +15,12 @@ The solution to upload artworks to the site without a login/admin function in th
 This app comes with basic functionality that allows our artist to choose a catagory, write a title and description, and upload an image to the cloud server, [Firebase](https://firebase.google.com). The app also pulls in images previously uploaded to relieve confusion with not currently uploaded works. Firebase then kicks back a direct link to the image, which the app takes along with the description, title, medium, and runs a POST route to [MongoDB](https://www.mongodb.com/what-is-mongodb).
 This app takes full advantage of React on the front end.
 
+![imageManager](https://firebasestorage.googleapis.com/v0/b/continuum-image-base.appspot.com/o/misc%2FScreen%20Shot%202020-02-27%20at%201.42.07%20PM.png?alt=media&token=a1e0dc00-000c-49d3-8ad6-385195bed47c)
+
 ### Continuum (Client/User side)
 Main site for users to view and request art commissions. The entire site is mostly built on a single page, with the only exception being the different galleries for art mediums. This app takes full advantage of React on the front end, only using basic CSS for styling.
+
+![Continuum](https://firebasestorage.googleapis.com/v0/b/continuum-image-base.appspot.com/o/misc%2FScreen%20Shot%202020-02-27%20at%201.49.24%20PM.png?alt=media&token=5f5eac62-df60-452d-ad35-c63978a4e022)
 
 Nav links:
 * Galleries: Within a gallery, will bring you to the page displaying all galleries.
