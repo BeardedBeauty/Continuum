@@ -18,7 +18,7 @@ h2 {
     transition: .5s;
 }
 .continuumright {
-    margin-left: 56%;
+    margin-left: 55%;
     transition: .5s;
 }
 
@@ -68,7 +68,7 @@ h2 {
 
 .holder1Small {
     height: 60px;
-    width: 415px;
+    /* width: 415px; */
     margin-left: 0;
     margin-right: auto;
     margin-bottom: 0px;
