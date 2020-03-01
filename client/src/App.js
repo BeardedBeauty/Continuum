@@ -81,8 +81,7 @@ class App extends React.Component {
                         <span className="test1" to="scrollto" onClick={() => this.scrollToGallery()} >
                             <Scroll
                                 scrollDown={this.scrollButton}
-                                hide={this.state.scrollButtonVisible}>
-                            </Scroll>
+                                hide={this.state.scrollButtonVisible} />
                         </span>
                         <Title
                             onscroll={this.scroll}

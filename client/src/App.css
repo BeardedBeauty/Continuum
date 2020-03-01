@@ -60,7 +60,12 @@ h2 {
   max-height: 250px;
   max-width: 300px;
   margin: 30px;
-  /* float: right; */
+  float: left;
+}
+
+.imgBox {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .elementmargin {
@@ -70,7 +75,6 @@ h2 {
 .aboutImageHideBorder {
   width: 100%;
   background-color: #131313;
-  /* border: 2px solid red; */
   float: left;
   margin-bottom: -10px;
   height: 50px;
@@ -108,9 +112,10 @@ h2 {
   margin-bottom: 0px;
 }
 
-/* .imageContianer {
-  ;
-} */
+.imageContianer {
+  width: 1440px;
+  margin-left: -720px;
+}
 
 .cssSadness {
   padding: 0px;
@@ -134,9 +139,24 @@ h2 {
   vertical-align: baseline;
 }
 
-@media screen and (max-width: 999px) {/*and (min-width: 64){*/
+@media screen and (max-width: 1439px) and (min-width: 1000px) {
+  .imageContianer {
+    width: 1060px;
+    margin-left: -500px;
+  }
+}
+
+@media screen and (max-width: 999px) {
   .elementmargin {
     margin-top: -112px;
+  }
+
+  .imageContianer {
+    width: 560px;
+    margin-left: -190px;
+    align-items: center;
+    text-align: center;
+    align-content: center;
   }
 
   .aboutimg {
