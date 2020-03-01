@@ -76,8 +76,8 @@
   }
   
   /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 999px){
+  /* @media only screen and (max-width: 999px){
     .modalcon {
       width: 100%;
     }
-  }
+  } */
