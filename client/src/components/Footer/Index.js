@@ -19,7 +19,7 @@ function Footer() {
             {/* <a href="https://www.instagram.com/martys_arts_continuum/">
                 <img src={link} alt="link" className="webconnect" />
             </a> */}
-            <h6>© John Ochs 2020</h6>
+            <h6>© oakware web services 2020</h6>
         </div>
     )
 };

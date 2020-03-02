@@ -68,7 +68,6 @@ img.img {
   width: 300px;
   height: 255px;
   margin: 30px;
-  /* background-color: #7c2e2e; */
 }
 
 .elementmargin {
@@ -144,8 +143,11 @@ img.img {
 
 @media screen and (max-width: 1400px) and (min-width: 1000px) {
   .imageContianer {
-    width: 1060px;
-    margin-left: -530px;
+    width: 996px;
+    margin-left: -498px;
+  }
+  .imgBox {
+    margin: 16px;
   }
 }
 
@@ -157,9 +159,10 @@ img.img {
   .imageContianer {
     width: 560px;
     margin-left: -280px;
-    align-items: center;
-    text-align: center;
-    align-content: center;
+  }
+  .imgBox {
+    width: 100%;
+    margin: 0;
   }
 
   .aboutimg {
