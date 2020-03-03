@@ -6,7 +6,10 @@ function Modal(props) {
         <div className={`modal ${props.modalDisplay}`} >
             <span className="close" onClick={() => props.generate(false)}>&times;</span>
             <img className="modalcon" id="imageModal" src={props.image} />
-            <div id="caption">{props.caption}</div>
+            <div id="caption">
+                <h3>{props.title}</h3>
+                <h4>{props.desc}</h4>
+            </div>
         </div>
     )
 };

@@ -28,7 +28,9 @@ class Gallery extends React.Component {
             modal: "displayNone",
             modalImage: "",
             scroll: props.scroll,
-            galleryLink: true
+            galleryLink: true,
+            imageTitle: null,
+            desc: null
         }
     };
 
@@ -51,7 +53,9 @@ class Gallery extends React.Component {
     displayModal = display => {
         display ? this.setState({
             modal: "displayBlock",
-            modalImage: display
+            modalImage: display.url,
+            imageTitle: display.title,
+            desc: display.desc
         }) : this.setState({
             modal: "displayNone",
             modalImage: null
@@ -68,7 +72,7 @@ class Gallery extends React.Component {
                         home={this.state.galleryLink}
                         scroll={this.state.scroll}
                     />
-                    <button onClick={this.runstate()}>state</button>
+                    <button onClick={this.runstate}>state</button>
                     <Switch>
                         <Route path="/" exact component={GalleryFolders} />
                         <Route path="/fineart"
@@ -120,6 +124,8 @@ class Gallery extends React.Component {
                     modalDisplay={this.state.modal}
                     image={this.state.modalImage}
                     generate={this.displayModal}
+                    title={this.state.imageTitle}
+                    desc={this.state.desc}
                 />
             </>
         )
