@@ -4,6 +4,9 @@ export default {
     getImages: function () {
         return axios.get("/api/images").catch(err => console.log(err));
     },
+    getImageQuery: function (get) {
+        return axios.get("/api/images/" + get).catch(err => console.log(err));
+    },
     postImages: function (post) {
         console.log(post);
         return axios.post("/api/images", post).catch(err => console.log(err));
