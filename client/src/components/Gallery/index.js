@@ -31,7 +31,7 @@ class Gallery extends React.Component {
             galleryLink: true,
             imageTitle: null,
             desc: null,
-            q: null
+            search: null
         }
     };
 
@@ -63,17 +63,13 @@ class Gallery extends React.Component {
         });
     }
 
-    keyPress = s => s.key === 'Enter' ? this.send() : console.log(s + " not enter");
+    keyPress = s => s.key === 'Enter' ? this.send(s) : console.log(s.key + " not enter");
 
-    input = d => {
-        const q = d.target.value;
-        this.setState({ q });
-        console.log(q);
-    };
+    input = d => this.setState({ search: d.target.value });
 
     send = (h) => {
         h.preventDefault();
-        console.log("yes, enter")
+        console.log("yes, enter");
     }
 
     render() {
