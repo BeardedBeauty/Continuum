@@ -62,17 +62,11 @@ class Gallery extends React.Component {
         });
     }
 
-    runstate = () => console.log(this.state);
-
     render() {
         return (
             <>
                 <Router>
-                    <Nav
-                        home={this.state.galleryLink}
-                        scroll={this.state.scroll}
-                    />
-                    <button onClick={this.runstate}>state</button>
+                    <Nav home={this.state.galleryLink} scroll={this.state.scroll} />
                     <Switch>
                         <Route path="/" exact component={GalleryFolders} />
                         <Route path="/fineart"
