@@ -27,6 +27,12 @@ Nav links:
 * About: Auto-scrolls to the bottom, where a short bio is written about the artist.
 * Contact: Currently only opens an email link. This will be changed to a dropdown with other options.
 
+### Future Updates
+* A search function that gets images from MongoDB matching what is typed into the field
+* Contact dropdown that displays Email, Instagram, LinkedIn icons
+* Scrolling landing image that shifts between images
+* User login with cart system for available works to be purchased in original and digital mediums
+
 ## Built With
 * [React](https://reactjs.org)
 * [Node](https://nodejs.org/en/)
