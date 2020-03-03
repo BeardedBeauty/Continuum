@@ -5,7 +5,12 @@ function ArtPage(props) {
     for (let r = 0; r < props.images.length; r++) {
         imgs.push(
             <div className="imgBox">
-                <img key={r} src={props.images[r]} alt="galleryimage" className="img" onClick={() => props.generate(props.images[r])} />
+                <img
+                    key={props.images[r]._id}
+                    src={props.images[r].url}
+                    alt={props.images[r]._id}
+                    className="img" onClick={() => props.generate(props.images[r])}
+                />
             </div>
         );
     }

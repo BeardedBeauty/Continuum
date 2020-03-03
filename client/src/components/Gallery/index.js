@@ -37,11 +37,11 @@ class Gallery extends React.Component {
             let e = res.data;
             for (let w = 0; w < e.length; w++) {
                 if (e[w].arttype === "fineart") { this.state.images.fineart.push(e[w]); }
-                else if (e[w].arttype === "leather") { this.state.images.leather.push(e[w].url); }
-                else if (e[w].arttype === "illustrations") { this.state.images.illust.push(e[w].url); }
-                else if (e[w].arttype === "murals") { this.state.images.murals.push(e[w].url); }
-                else if (e[w].arttype === "signs") { this.state.images.signs.push(e[w].url); }
-                else if (e[w].arttype === "misc") { this.state.images.misc.push(e[w].url); }
+                else if (e[w].arttype === "leather") { this.state.images.leather.push(e[w]); }
+                else if (e[w].arttype === "illustrations") { this.state.images.illust.push(e[w]); }
+                else if (e[w].arttype === "murals") { this.state.images.murals.push(e[w]); }
+                else if (e[w].arttype === "signs") { this.state.images.signs.push(e[w]); }
+                else if (e[w].arttype === "misc") { this.state.images.misc.push(e[w]); }
             }
         }).catch(err => console.log(err));
     };
