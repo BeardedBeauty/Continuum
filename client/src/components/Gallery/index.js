@@ -30,7 +30,8 @@ class Gallery extends React.Component {
             scroll: props.scroll,
             galleryLink: true,
             imageTitle: null,
-            desc: null
+            desc: null,
+            q: null
         }
     };
 
@@ -62,11 +63,26 @@ class Gallery extends React.Component {
         });
     }
 
+    keyPress = s => s.key === 'Enter' ? this.send() : console.log(s + " not enter");
+
+    input = d => {
+        const q = d.target.value;
+        this.setState({ q });
+        console.log(q);
+    };
+
+    send = (h) => {
+        h.preventDefault();
+        console.log("yes, enter")
+    }
+
     render() {
         return (
             <>
                 <Router>
-                    <Nav home={this.state.galleryLink} scroll={this.state.scroll} />
+                    <Nav home={this.state.galleryLink} scroll={this.state.scroll}
+                        keyPress={this.keyPress}
+                        input={this.input} />
                     <Switch>
                         <Route path="/" exact component={GalleryFolders} />
                         <Route path="/fineart"
