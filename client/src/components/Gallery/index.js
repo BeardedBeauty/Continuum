@@ -24,6 +24,7 @@ class Gallery extends React.Component {
                 murals: [],
                 signs: []
             },
+            imageSearch: [],
             title: "G a l l e r i e s",
             modal: "displayNone",
             modalImage: "",
@@ -63,21 +64,32 @@ class Gallery extends React.Component {
         });
     }
 
-    keyPress = s => s.key === 'Enter' ? this.send(s.key) : console.log(s.key + " not enter");
+    keyPress = s => s.key === 'Enter' ? this.send(s) : console.log(s.key + " not enter");
 
     input = d => this.setState({ search: d.target.value });
 
-    // send = (h) => {
-    //     h.preventDefault();
-    //     console.log("yes, enter");
-    //     api.getImageQuery(h).then(res => { });
-    // }
+    send = h => {
+        h.preventDefault();
+        let x = [];
+        for (let j in this.state.images) {
+            if (this.state.images.hasOwnProperty(j)) {
+                for (let k = 0; k < this.state.images[j].length; k++) {
+                    const l = this.state.images[j][k].desc.toLowerCase();
+                    const z = this.state.search.toLowerCase();
+                    l.search(z) > -1 ? x.push(this.state.images[j][k]) : this.setState({ imageSearch: [] });
+                }
+            }
+        }
+        this.setState({ imageSearch: x });
+    }
 
     render() {
         return (
             <>
                 <Router>
-                    <Nav home={this.state.galleryLink} scroll={this.state.scroll}
+                    <Nav
+                        home={this.state.galleryLink}
+                        scroll={this.state.scroll}
                         keyPress={this.keyPress}
                         input={this.input} />
                     <Switch>
@@ -122,6 +134,13 @@ class Gallery extends React.Component {
                             render={props => <Fineart {...props}
                                 images={this.state.images.misc}
                                 title={"M i s c e l l a n e o u s"}
+                                generate={this.displayModal}
+                            />}
+                        />
+                        <Route path="/search"
+                            render={props => <Fineart {...props}
+                                images={this.state.imageSearch}
+                                title={"S e a r c h"}
                                 generate={this.displayModal}
                             />}
                         />

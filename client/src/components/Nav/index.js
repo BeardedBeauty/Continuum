@@ -28,12 +28,12 @@ function Nav(props) {
                         <div className="linkBox">
                             <span id="aboutClick" onClick={() => props.scroll()} className="navLink">A B O U T</span>
                         </div>
-                        {/* <form>
+                        <form>
                             <input type="text" id="search" name="search" placeholder="search"
                                 onChange={f => props.input(f)}
                                 onKeyPress={g => props.keyPress(g)}>
                             </input>
-                        </form> */}
+                        </form>
                     </div>
                 </div>
             </div>
