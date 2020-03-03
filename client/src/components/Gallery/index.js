@@ -67,11 +67,11 @@ class Gallery extends React.Component {
 
     input = d => this.setState({ search: d.target.value });
 
-    send = (h) => {
-        h.preventDefault();
-        console.log("yes, enter");
-        api.getImageQuery(h).then(res => { });
-    }
+    // send = (h) => {
+    //     h.preventDefault();
+    //     console.log("yes, enter");
+    //     api.getImageQuery(h).then(res => { });
+    // }
 
     render() {
         return (
