@@ -64,19 +64,22 @@ class Gallery extends React.Component {
         });
     }
 
-    keyPress = s => s.key === 'Enter' ? this.send(s) : console.log(s.key + " not enter");
+    keyPress = s => s.key === 'Enter' ? this.send(s) : console.log(s.key + ": not enter");
 
     input = d => this.setState({ search: d.target.value });
 
     send = h => {
         h.preventDefault();
         let x = [];
-        for (let j in this.state.images) {
-            if (this.state.images.hasOwnProperty(j)) {
-                for (let k = 0; k < this.state.images[j].length; k++) {
-                    const l = this.state.images[j][k].desc.toLowerCase();
+        let v = this.state.images
+        for (let j in v) {
+            if (v.hasOwnProperty(j)) {
+                for (let k = 0; k < v[j].length; k++) {
+                    const l = v[j][k].desc.toLowerCase();
+                    const c = v[j][k].title.toLowerCase();
                     const z = this.state.search.toLowerCase();
-                    l.search(z) > -1 ? x.push(this.state.images[j][k]) : this.setState({ imageSearch: [] });
+                    l.search(z) > -1 ? x.push(v[j][k]) : console.log(null);
+                    if (c.search(z) > -1 && x[-1] !== v[j][k]) { x.push(v[j][k]) }
                 }
             }
         }

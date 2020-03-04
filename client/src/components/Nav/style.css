@@ -23,7 +23,7 @@
     margin-top: 0px;
 }
 
-#aboutClick {cursor: pointer;}
+.aboutClick:hover {cursor: pointer;}
 
 .navLink:hover {color: #0995d6;}
 
@@ -56,8 +56,8 @@ input[type=text], select {
     padding: 12px 20px;
     /* margin: 8px 0; */
     display: inline-block;
-    border: 2px solid #ffd82a;
-    /* border-radius: 4px; */
+    border: 0px;
+    border-radius: 4px;
     /* box-sizing: border-box; */
 }
 
