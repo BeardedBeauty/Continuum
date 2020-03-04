@@ -4,6 +4,7 @@
     border-top: 2px solid goldenrod;
     border-bottom: 2px solid goldenrod;
     height: 80px;
+    z-index: 10;
 }
 
 .navLink {
@@ -51,25 +52,32 @@
     float: left;
 }
 
-.formSearch {
-    margin: 0px, auto, 0px, auto;
+#search{
+    width: 100%;
+    background-color: #525252;
+    margin-bottom: 100px;
+}
+
+.block {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 500px;
 }
 
 #searchContainer {
-    border: 2px solid #ffd82a;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-    padding: 4px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    width: 100%;
 }
 
 input[type=text], select {
-    width: 150px;
     padding: 12px 20px;
     /* margin: 8px 0; */
     display: block;
     border: 0px;
     border-radius: 4px;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 @media screen and (max-width: 999px) {
@@ -100,5 +108,9 @@ input[type=text], select {
         margin-left: -80px;
         margin-right: auto;
         margin-top: 0;
+    }
+
+    .block {
+        width: 300px;
     }
 }

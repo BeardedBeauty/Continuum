@@ -92,9 +92,7 @@ class Gallery extends React.Component {
                 <Router>
                     <Nav
                         home={this.state.galleryLink}
-                        scroll={this.state.scroll}
-                        keyPress={this.keyPress}
-                        input={this.input} />
+                        scroll={this.state.scroll} />
                     <Switch>
                         <Route path="/" exact component={GalleryFolders} />
                         <Route path="/fineart"
@@ -145,6 +143,9 @@ class Gallery extends React.Component {
                                 images={this.state.imageSearch}
                                 title={"S e a r c h"}
                                 generate={this.displayModal}
+                                search={true}
+                                keyPress={this.keyPress}
+                                input={this.input}
                             />}
                         />
                     </Switch>

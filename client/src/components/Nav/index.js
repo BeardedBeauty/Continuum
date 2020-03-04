@@ -34,14 +34,6 @@ function Nav(props) {
                     </div>
                 </div>
             </div>
-            <div id="searchContainer">
-                <form className="formSearch">
-                    <input type="text" id="search" name="search" placeholder="find it here"
-                        onChange={f => props.input(f)}
-                        onKeyPress={g => props.keyPress(g)}>
-                    </input>
-                </form>
-            </div>
             {/* <div className="center">id="marginLinkLeft"
                 <div className="iconContainer">
                     <a href="mailto:marty_ochs@yahoo.com">

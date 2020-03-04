@@ -19,6 +19,16 @@ function ArtPage(props) {
             <div className="titleGallery">
                 <p className="titleText">{props.title}</p>
             </div>
+            {props.search && <div id="searchContainer">
+                <div className="block">
+                    <form className="formSearch">
+                        <input type="text" id="search" name="search" placeholder="find it here"
+                            onChange={f => props.input(f)}
+                            onKeyPress={g => props.keyPress(g)}>
+                        </input>
+                    </form>
+                </div>
+            </div>}
             <div className="center">
                 <div className="imageContianer">{imgs}</div>
             </div>
