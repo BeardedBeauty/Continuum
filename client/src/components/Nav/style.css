@@ -29,7 +29,7 @@
 
 .navLinkContainer {
     margin-top: 30px;
-    margin-left: -450px;
+    margin-left: -500px;
     float: left;
     text-align: center;
 }
@@ -47,15 +47,26 @@
 }
 
 .linkBox {
-    width: 300px;
+    width: 250px;
     float: left;
+}
+
+.formSearch {
+    margin: 0px, auto, 0px, auto;
+}
+
+#searchContainer {
+    border: 2px solid #ffd82a;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 4px;
 }
 
 input[type=text], select {
     width: 150px;
     padding: 12px 20px;
     /* margin: 8px 0; */
-    display: inline-block;
+    display: block;
     border: 0px;
     border-radius: 4px;
     /* box-sizing: border-box; */
@@ -64,7 +75,7 @@ input[type=text], select {
 @media screen and (max-width: 999px) {
     .gallerytitle {
         margin-top: 109px;
-        height: 140px;
+        height: 170px;
     }
 
     .navLink {

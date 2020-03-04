@@ -28,16 +28,20 @@ function Nav(props) {
                         <div className="linkBox">
                             <span onClick={() => props.scroll()} className="navLink aboutClick">A B O U T</span>
                         </div>
-                        <Link to="/search" className="navLink aboutClick">S E A R C H</Link>
+                        <div className="linkBox">
+                            <Link to="/search" className="navLink aboutClick">S E A R C H</Link>
+                        </div>
                     </div>
                 </div>
             </div>
-            <form>
-                <input type="text" id="search" name="search" placeholder="search"
-                    onChange={f => props.input(f)}
-                    onKeyPress={g => props.keyPress(g)}>
-                </input>
-            </form>
+            <div id="searchContainer">
+                <form className="formSearch">
+                    <input type="text" id="search" name="search" placeholder="find it here"
+                        onChange={f => props.input(f)}
+                        onKeyPress={g => props.keyPress(g)}>
+                    </input>
+                </form>
+            </div>
             {/* <div className="center">id="marginLinkLeft"
                 <div className="iconContainer">
                     <a href="mailto:marty_ochs@yahoo.com">
