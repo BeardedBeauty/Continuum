@@ -33,7 +33,7 @@ class Gallery extends React.Component {
             imageTitle: null,
             desc: null,
             search: ""
-        }
+        };
     };
 
     componentWillMount() {
@@ -46,7 +46,7 @@ class Gallery extends React.Component {
                 else if (e[w].arttype === "murals") { this.state.images.murals.push(e[w]); }
                 else if (e[w].arttype === "signs") { this.state.images.signs.push(e[w]); }
                 else if (e[w].arttype === "misc") { this.state.images.misc.push(e[w]); }
-            }
+            };
         }).catch(err => console.log(err));
     };
 
@@ -62,15 +62,15 @@ class Gallery extends React.Component {
             modal: "displayNone",
             modalImage: null
         });
-    }
+    };
 
     keyPress = s => {
         if (s.key === 'Enter' && this.state.search != "") this.send(s);
         else if (s.key === 'Enter' && this.state.search == "") {
             s.preventDefault();
             this.send(false);
-        }
-    }
+        };
+    };
 
     input = d => this.setState({ search: d.target.value });
 
@@ -91,7 +91,7 @@ class Gallery extends React.Component {
                 };
             };
             this.setState({ imageSearch: x });
-        }
+        };
     };
 
     render() {
@@ -168,7 +168,7 @@ class Gallery extends React.Component {
                 />
             </>
         )
-    }
+    };
 };
 
 export default Gallery;
