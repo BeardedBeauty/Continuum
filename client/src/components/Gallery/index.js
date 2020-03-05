@@ -32,7 +32,7 @@ class Gallery extends React.Component {
             galleryLink: true,
             imageTitle: null,
             desc: null,
-            search: null
+            search: ""
         }
     };
 
@@ -64,27 +64,35 @@ class Gallery extends React.Component {
         });
     }
 
-    keyPress = s => s.key === 'Enter' ? this.send(s) : console.log(s.key + ": not enter");
+    keyPress = s => {
+        if (s.key === 'Enter' && this.state.search != "") this.send(s);
+        else if (s.key === 'Enter' && this.state.search == "") {
+            s.preventDefault();
+            this.send(false);
+        }
+    }
 
     input = d => this.setState({ search: d.target.value });
 
     send = h => {
-        h.preventDefault();
-        let x = [];
-        let v = this.state.images
-        for (let j in v) {
-            if (v.hasOwnProperty(j)) {
-                for (let k = 0; k < v[j].length; k++) {
-                    const l = v[j][k].desc.toLowerCase();
-                    const c = v[j][k].title.toLowerCase();
-                    const z = this.state.search.toLowerCase();
-                    l.search(z) > -1 ? x.push(v[j][k]) : console.log(null);
-                    if (c.search(z) > -1 && x[-1] !== v[j][k]) { x.push(v[j][k]) }
-                }
-            }
+        if (h) {
+            h.preventDefault();
+            let x = [];
+            let v = this.state.images
+            for (let j in v) {
+                if (v.hasOwnProperty(j)) {
+                    for (let k = 0; k < v[j].length; k++) {
+                        const l = v[j][k].desc.toLowerCase();
+                        const c = v[j][k].title.toLowerCase();
+                        const z = this.state.search.toLowerCase();
+                        l.search(z) > -1 ? x.push(v[j][k]) : console.log(null);
+                        if (c.search(z) > -1 && x[-1] !== v[j][k]) { x.push(v[j][k]) };
+                    };
+                };
+            };
+            this.setState({ imageSearch: x });
         }
-        this.setState({ imageSearch: x });
-    }
+    };
 
     render() {
         return (
@@ -93,6 +101,7 @@ class Gallery extends React.Component {
                     <Nav
                         home={this.state.galleryLink}
                         scroll={this.state.scroll} />
+                    <button onClick={() => console.log(this.state.search == "")}>search?</button>
                     <Switch>
                         <Route path="/" exact component={GalleryFolders} />
                         <Route path="/fineart"
