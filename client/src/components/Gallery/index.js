@@ -86,7 +86,7 @@ class Gallery extends React.Component {
                         const c = v[j][k].title.toLowerCase();
                         const z = this.state.search.toLowerCase();
                         l.search(z) > -1 ? x.push(v[j][k]) : console.log(null);
-                        if (c.search(z) > -1 && x[-1] !== v[j][k]) { x.push(v[j][k]) };
+                        if (c.search(z) > -1 && x[-1] !== v[j][k]) x.push(v[j][k])
                     };
                 };
             };
@@ -101,7 +101,6 @@ class Gallery extends React.Component {
                     <Nav
                         home={this.state.galleryLink}
                         scroll={this.state.scroll} />
-                    <button onClick={() => console.log(this.state.search == "")}>search?</button>
                     <Switch>
                         <Route path="/" exact component={GalleryFolders} />
                         <Route path="/fineart"
