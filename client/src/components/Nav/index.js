@@ -16,23 +16,24 @@ function Nav(props) {
             <div className="gallerytitle">
                 <div className="center">
                     <div className="navLinkContainer">
-                        {props.home && <div className="linkBox">
+                        {props.home && <div className={"linkBox " + props.hideLink}>
                             <Link to="/" className="navLink">G A L L E R I E S</Link>
                         </div>}
-                        {!props.home && <div className="linkBox">
+                        {!props.home && <div className={"linkBox " + props.hideLink}>
                             <p className="antinavLink" >G A L L E R I E S</p>
                         </div>}
-                        <div className="linkBox">
+                        <div className={"linkBox " + props.hideLink}>
                             <a href="mailto:marty_ochs@yahoo.com" className="navLink">C O N T A C T</a>
                         </div>
-                        <div className="linkBox">
+                        <div className={"linkBox " + props.hideLink}>
                             <span onClick={() => props.scroll()} className="navLink aboutClick">A B O U T</span>
                         </div>
-                        <div className="linkBox">
+                        <div className={"linkBox " + props.hideLink}>
                             <Link to="/search" className="navLink aboutClick">S E A R C H</Link>
                         </div>
                     </div>
                 </div>
+                <button onClick={() => props.hide()}>hdie</button>
             </div>
             {/* <div className="center">id="marginLinkLeft"
                 <div className="iconContainer">

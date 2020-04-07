@@ -32,7 +32,8 @@ class Gallery extends React.Component {
             galleryLink: true,
             imageTitle: null,
             desc: null,
-            search: ""
+            search: "",
+            navDisplay: ""
         };
     };
 
@@ -94,13 +95,19 @@ class Gallery extends React.Component {
         };
     };
 
+    hide = () => {
+        this.state.navDisplay ? this.setState({ navDisplay: "" }) : this.setState({ navDisplay: "hide" });
+    }
+
     render() {
         return (
             <>
                 <Router>
                     <Nav
                         home={this.state.galleryLink}
-                        scroll={this.state.scroll} />
+                        scroll={this.state.scroll}
+                        hide={this.hide}
+                        hideLink={this.state.navDisplay} />
                     <Switch>
                         <Route path="/" exact component={GalleryFolders} />
                         <Route path="/fineart"

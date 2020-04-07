@@ -50,6 +50,11 @@
 .linkBox {
     width: 250px;
     float: left;
+    transition: .2s;
+}
+
+.hide {
+    display: true;
 }
 
 #search{
@@ -102,6 +107,10 @@ input[type=text], select {
         float: left;
         margin-top: 15px;
     }
+
+    .hide {
+        display: false;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -113,5 +122,9 @@ input[type=text], select {
 
     .block {
         width: 300px;
+    }
+
+    .hide {
+        display: false;
     }
 }

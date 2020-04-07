@@ -23,7 +23,7 @@ class App extends React.Component {
             holder2placer: "holder2PlacerCenter",
             scrollButtonVisible: "scrollButton",
             modal: "displayNone",
-            image: "https://i.ytimg.com/vi/tFZ8YBwOgoY/maxresdefault.jpg"
+            image: "https://i.ytimg.com/vi/tFZ8YBwOgoY/maxresdefault.jpg",
         }
     };
 
