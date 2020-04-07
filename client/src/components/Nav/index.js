@@ -13,7 +13,7 @@ import {
 function Nav(props) {
     return (
         <>
-            <div className="gallerytitle">
+            <div className="gallerytitle" id={props.galleryDrawer}>
                 <div className="center">
                     <div className="navLinkContainer">
                         {props.home && <div className={"linkBox " + props.hideLink}>

@@ -33,7 +33,8 @@ class Gallery extends React.Component {
             imageTitle: null,
             desc: null,
             search: "",
-            navDisplay: "hideLinks"
+            navDisplay: "hideLinks",
+            galleryDrawer: "gallergyLinksClosed"
         };
     };
 
@@ -95,7 +96,15 @@ class Gallery extends React.Component {
         };
     };
 
-    hide = () => this.state.navDisplay ? this.setState({ navDisplay: "" }) : this.setState({ navDisplay: "hideLinks" });
+    hide = () => {
+        this.state.navDisplay ? this.setState({
+            navDisplay: "",
+            galleryDrawer: "gallergyLinksMobile"
+        }) : this.setState({
+            navDisplay: "hideLinks",
+            galleryDrawer: "gallergyLinksClosed"
+        });
+    }
 
     render() {
         return (
@@ -105,7 +114,8 @@ class Gallery extends React.Component {
                         home={this.state.galleryLink}
                         scroll={this.state.scroll}
                         hide={this.hide}
-                        hideLink={this.state.navDisplay} />
+                        hideLink={this.state.navDisplay}
+                        galleryDrawer={this.state.galleryDrawer} />
                     <Switch>
                         <Route path="/" exact component={GalleryFolders} />
                         <Route path="/fineart"
