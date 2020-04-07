@@ -33,7 +33,11 @@ function Nav(props) {
                         </div>
                     </div>
                 </div>
-                <button onClick={() => props.hide()}>hdie</button>
+                <div id="burger" onClick={() => props.hide()}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
             {/* <div className="center">id="marginLinkLeft"
                 <div className="iconContainer">
