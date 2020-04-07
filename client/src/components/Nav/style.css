@@ -100,6 +100,10 @@ input[type=text], select {
     left: 0;
 }
 
+.hideLinks {
+    visibility: visible;
+}
+
 @media screen and (max-width: 999px) {
     .gallerytitle {
         margin-top: 109px;
@@ -125,6 +129,10 @@ input[type=text], select {
     #burger {
         visibility: visible;
     }
+
+    .hideLinks {
+        visibility: hidden;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -140,5 +148,9 @@ input[type=text], select {
 
     #burger {
         visibility: visible;
+    }
+
+    .hideLinks {
+        visibility: hidden;
     }
 }

@@ -33,7 +33,7 @@ class Gallery extends React.Component {
             imageTitle: null,
             desc: null,
             search: "",
-            navDisplay: ""
+            navDisplay: "hideLinks"
         };
     };
 
@@ -95,9 +95,7 @@ class Gallery extends React.Component {
         };
     };
 
-    hide = () => {
-        this.state.navDisplay ? this.setState({ navDisplay: "" }) : this.setState({ navDisplay: "hide" });
-    }
+    hide = () => this.state.navDisplay ? this.setState({ navDisplay: "" }) : this.setState({ navDisplay: "hideLinks" });
 
     render() {
         return (
