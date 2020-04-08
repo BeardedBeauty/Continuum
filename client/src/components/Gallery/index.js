@@ -34,7 +34,7 @@ class Gallery extends React.Component {
             desc: null,
             search: "",
             navDisplay: "hideLinks",
-            galleryDrawer: "gallergyLinksClosed"
+            galleryDrawer: "galleryLinksClosed"
         };
     };
 
@@ -67,8 +67,8 @@ class Gallery extends React.Component {
     };
 
     keyPress = s => {
-        if (s.key === 'Enter' && this.state.search != "") this.send(s);
-        else if (s.key === 'Enter' && this.state.search == "") {
+        if (s.key === 'Enter' && this.state.search !== "") this.send(s);
+        else if (s.key === 'Enter' && this.state.search === "") {
             s.preventDefault();
             this.send(false);
         };
@@ -99,10 +99,10 @@ class Gallery extends React.Component {
     hide = () => {
         this.state.navDisplay ? this.setState({
             navDisplay: "",
-            galleryDrawer: "gallergyLinksMobile"
+            galleryDrawer: "galleryLinksMobile"
         }) : this.setState({
             navDisplay: "hideLinks",
-            galleryDrawer: "gallergyLinksClosed"
+            galleryDrawer: "galleryLinksClosed"
         });
     }
 

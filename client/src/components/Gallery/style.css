@@ -16,6 +16,10 @@
 }
 
 @media screen and (max-width: 999px) {/*and (min-width: 64){*/
+    .gallery {
+        margin-top: -50px;
+    }
+    
     .stacks {
         width: 500px;
         margin-left: -250px;
