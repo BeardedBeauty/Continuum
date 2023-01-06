@@ -24,6 +24,7 @@
     "express": "^4.17.1",
     "jquery": "^3.4.1",
     "mongoose": "^5.8.11",
+    "react-scripts": "^5.0.1",
     "react-scroll": "^1.7.16"
   }
 }
